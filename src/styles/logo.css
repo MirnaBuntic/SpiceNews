@@ -1,8 +1,11 @@
 .logo {
     display: flex;
     align-items: center;
+    letter-spacing: 2px;
+    font-family: fantasy;
+    margin: 1rem;
 }
 
 .logo img{
-    max-width: 40px;
+    max-width: 20px;
 }
