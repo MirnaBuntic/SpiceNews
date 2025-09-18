@@ -1,12 +1,17 @@
-import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
-import './styles/global.css';
+import Home from './components/home';
+import './styles/global.scss';
 
 
 export default function App() {
 
   return (
-    <Layout></Layout>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Layout>
   )
 }
 
