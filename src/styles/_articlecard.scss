@@ -6,9 +6,15 @@
     background-color: white;
     color: black;
     padding: 1rem;
-    border-radius: 10px;
-}
+    border-radius: 5px;
 
-.article-card img{
-    max-width: 98px;
+    img {
+        max-width: 98px;
+        border-radius: 2px;
+    }
+
+    figcaption {
+        font-weight: 600;
+        margin-top: .5rem;
+    }
 }
