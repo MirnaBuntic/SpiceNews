@@ -1,13 +1,17 @@
-import katt from '../img/katt.jpg';
+import { Link } from "react-router-dom"
 
-export default function ArticleCard() {
+export default function ArticleCard({ title, image, link }) {
 
     return (
         <article>
-            <figure className='article-card'>
-                <img src={katt} alt='katt'/>
-                <figcaption>Artikkel 1</figcaption>
-            </figure>
+            <Link to={link}>
+
+                <figure className='article-card'>
+                    <img src={image} alt={title} />
+                    <figcaption>{title}</figcaption>
+                </figure>
+
+            </Link>
         </article>
     )
 }
