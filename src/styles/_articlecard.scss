@@ -6,7 +6,7 @@
     background-color: #fcf9f2;
     padding: .5rem;
     border: 1px solid #e0d8c3; /* lätt kant för polaroid-effekt */
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
 
 
     img {
@@ -17,10 +17,10 @@
     figcaption {
         font-weight: 600;
         margin-top: .75rem;
-        font-family: 'Courier New', Courier, monospace;
         font-size: 1rem;
         text-align: center;
         letter-spacing: 0.5px;
-        color: #2b2b2b;
+        color: Black;
+        font-weight: bold;
     }
 }
