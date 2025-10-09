@@ -5,7 +5,7 @@ import Header from "./Header";
 export default function Home() {
 
     return (
-        <>
+        <div className="home-container">
             <Header />
 
             <section className="article-section">
@@ -33,6 +33,6 @@ export default function Home() {
                 />
         
             </section>
-        </>
+        </div>
     )
 }
