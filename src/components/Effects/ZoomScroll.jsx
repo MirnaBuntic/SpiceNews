@@ -11,7 +11,7 @@ export default function ZoomScroll({ image, alt = "", startScale = 1, endScale =
         const onScroll = () => {
             const position = zoomImage.getBoundingClientRect()
 
-            const startThreshold = 0.4
+            const startThreshold = 0.5
             const endThreshold = 1
             
             let progress = (1 - position.top / window.innerHeight - startThreshold) / (endThreshold - startThreshold)

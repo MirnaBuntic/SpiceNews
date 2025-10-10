@@ -1,7 +1,7 @@
 import HeroScroll from "../Effects/HeroScroll"
 import Trond_fengsel from "../../img/Trond/Trond_fengsel.jpg"
 import DollarBill from "../../img/Trond/DollarBill_Trond.jpg"
-import Images from "../../img/Trond/Images.jpg"
+import skog from "../../img/Trond/skog.jpg"
 import "../../styles/_trond.scss"
 import ZoomScroll from "../Effects/ZoomScroll"
 
@@ -15,7 +15,7 @@ export default function Trond() {
                <img src={DollarBill} alt="Trond på en hundralapp" />
             </section>
 
-            <ZoomScroll image={Images} alt="Kirkens Bymisjon" zoom={0.3} />
+            <ZoomScroll image={skog} alt="Kirkens Bymisjon" zoom={0.3} />
            
         </div>
     )
