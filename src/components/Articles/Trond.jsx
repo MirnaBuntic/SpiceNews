@@ -8,13 +8,13 @@ import ZoomToTransition from "../Effects/ZoomToTransition"
 
 export default function Trond() {
     return (
-        <div className="trond-article">
+        <section className="trond-article">
             <HeroScroll title="Trond" image={Trond_fengsel} />
 
-            <section className="dollarBill-section">
+            <article className="dollarBill-section">
                <h2>"100kr"</h2>
                <img src={DollarBill} alt="Trond på en hundralapp" />
-            </section>
+            </article>
 
             <ZoomToTransition
                 imageStart={skog}
@@ -29,6 +29,6 @@ export default function Trond() {
                 transitionEnd={1.3}
             />
            
-        </div>
+        </section>
     )
 }

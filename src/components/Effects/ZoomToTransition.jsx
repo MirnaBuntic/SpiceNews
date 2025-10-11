@@ -54,11 +54,11 @@ export default function ZoomScroll({
     }, [startScale, endScale, zoomStart, zoomEnd, transitionStart, transitionEnd])
 
     return (
-        <section className="zoom-section">
+        <article className="zoom-section">
             <div className="zoom-container">
                 <img ref={startRef} src={imageStart} alt={altStart} className="zoom-image base" />
                 <img ref={endRef} src={imageEnd} alt={altEnd} className="zoom-image overlay" />
             </div>
-        </section>
+        </article>
     )
 }
