@@ -39,7 +39,7 @@ export default function ZoomScroll({
 
             startImg.style.opacity = 1 - transitionProgress
             endImg.style.opacity = transitionProgress
-            endImg.style.filter = `contrast(${1 + transitionProgress * 0.1}) saturate(${1 + transitionProgress * 0.1})`
+            endImg.style.filter = `contrast(${1 + transitionProgress * 0.15}) saturate(${1 + transitionProgress * 0.15})`
 
             if (transitionProgress > 1) {
                 startImg.style.display = "none"
