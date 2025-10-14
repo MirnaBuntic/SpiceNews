@@ -1,10 +1,10 @@
 import "../../styles/_heroscroll.scss"
 
-export default function HeroScroll({ title, image }) {
+export default function HeroScroll({ children, image }) {
     return (
         <article className="hero-scroll">
-            <img src={image} alt={title} className="hero-image" />
-            <h1 className="hero-title">{title}</h1>
+            <img src={image} alt="" className="hero-image" />
+            <div className="hero-text">{children}</div>
         </article>
     )
 }
