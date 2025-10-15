@@ -18,6 +18,7 @@ export default function Trond() {
                 image2={Busk2}
                 overlay1={Lommelykt1}
                 overlay2={Lommelykt2}
+                text="STOP, POLITI!"
                 alt1="Busk nr 1"
                 alt2="Busk nr 2"
                 altOverlay1="Lommelykt av"

@@ -6,25 +6,27 @@ import "../../styles/_imgscrollswap.scss";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ImgScrollSwap({
-  image1,
-  image2,
-  overlay1,
-  overlay2,
-  alt1,
-  alt2,
-  altOverlay1,
-  altOverlay2,
-  flipCount = 10,
-  flipSpeed = 0.1,
-  delayScroll = 0.2,
-  overlayScrollOffset = 0.2,
-  className = "",
+    image1,
+    image2,
+    overlay1,
+    overlay2,
+    text,
+    alt1,
+    alt2,
+    altOverlay1,
+    altOverlay2,
+    flipCount = 10,
+    flipSpeed = 0.1,
+    delayScroll = 0.2,
+    overlayScrollOffset = 0.2,
+    className = "",
 }) {
-  const containerRef = useRef(null);
-  const img1Ref = useRef(null);
-  const img2Ref = useRef(null);
-  const overlay1Ref = useRef(null);
-  const overlay2Ref = useRef(null);
+    const containerRef = useRef(null);
+    const img1Ref = useRef(null);
+    const img2Ref = useRef(null);
+    const overlay1Ref = useRef(null);
+    const overlay2Ref = useRef(null);
+    const textRef = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -33,6 +35,8 @@ export default function ImgScrollSwap({
         gsap.set(img2Ref.current, { zIndex: 0 });
         gsap.set(overlay1Ref.current, { autoAlpha: 0 });
         gsap.set(overlay2Ref.current, { autoAlpha: 0 });
+        gsap.set(textRef.current, { autoAlpha: 0, innerText: "" });
+
 
 
         const tl = gsap.timeline({
@@ -58,13 +62,15 @@ export default function ImgScrollSwap({
         }
 
         tl.to(overlay1Ref.current, { autoAlpha: 1, duration: 0.5 });
+
         tl.to(overlay2Ref.current, { autoAlpha: 1, duration: 0.5 }, `+=${overlayScrollOffset}`);
+        tl.to(textRef.current, { autoAlpha: 1, duration: 0.5, onStart: () => textRef.current.innerText = text }, "<");
         tl.to(overlay1Ref.current, { autoAlpha: 0, duration: 0.5 }, `<`);
 
     }, containerRef);
 
     return () => ctx.revert();
-    }, [flipCount, flipSpeed, delayScroll, overlayScrollOffset]);
+    }, [flipCount, flipSpeed, delayScroll, overlayScrollOffset, text]);
 
 
   return (
@@ -94,6 +100,10 @@ export default function ImgScrollSwap({
         alt={altOverlay2}
         className="overlay-image"
       />
+
+        <div ref={textRef} className="text-content"></div>
+    
+
     </div>
   );
 }
