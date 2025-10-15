@@ -23,7 +23,7 @@ export default function Trond() {
                 alt2="Busk nr 2"
                 altOverlay1="Lommelykt av"
                 altOverlay2="Lommelykt på"
-                flipCount={8}
+                flipCount={2}
                 flipSpeed={0.1}
                 delayScroll={0.1}
                 overlayScrollOffset={0.2}
