@@ -28,5 +28,9 @@
     opacity: 0;
     transform: rotate(-30deg); 
     transform-origin: bottom right;
+    text-shadow:
+    3px 3px 6px rgba(0, 0, 0, 0.8),  
+    6px 6px 12px rgba(0, 0, 0, 0.6),  
+    0 0 2px rgba(0, 0, 0, 0.9); 
   }
 }
