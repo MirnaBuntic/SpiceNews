@@ -18,7 +18,7 @@ export default function ScrollVideo({ src, className = "", playbackRate = 1 }) {
 
     const trigger = ScrollTrigger.create({
       trigger: container,
-      start: "top+=10 center",   
+      start: "top center",   
       end: "bottom center",  
       onEnter: () => video.play(),
       onEnterBack: () => video.play(),

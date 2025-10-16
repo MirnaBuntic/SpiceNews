@@ -1,12 +1,15 @@
 import HeroScroll from "../Effects/HeroScroll"
 import ImgScrollSwap from "../Effects/ImgScrollSwap"
 import ScrollVideo from "../Effects/ScrollVideo"
+import ZoomTransition from "../Effects/ZoomTransition"
 import DollarBill from "../../img/Trond/DollarBill_Trond.jpg"
 import Busk1 from "../../img/Trond/Busk1.png"
 import Busk2 from "../../img/Trond/Busk2.png"
 import Lommelykt1 from "../../img/Trond/Lommelykt1.png"
 import Lommelykt2 from "../../img/Trond/Lommelykt2.png"
 import Avis_animasjon from "../../img/Trond/Avis_animasjon_final.mp4"
+import Skog from "../../img/Trond/skog.jpg"
+import Trond_intervju from "../../img/Trond/Trond_intervju.jpg"
 import "../../styles/_trond.scss"
 
 
@@ -28,7 +31,7 @@ export default function Trond() {
                 flipCount={2}
                 flipSpeed={0.5}
                 delayScroll={0.1}
-                overlayScrollOffset={0.5}
+                overlayScrollOffset={0.8}
                 className="my-flipbook"
             />
 
@@ -50,9 +53,18 @@ export default function Trond() {
                 <h2>Men hvordan havnet de her?</h2>
             </article>
 
-            <article className="interview">
-
-            </article>
+            <ZoomTransition
+                imageStart={Skog}
+                imageEnd={Trond_intervju}
+                altStart="Kirkens Bymisjon"
+                altEnd="Trond under intervjun"
+                startScale={1}
+                endScale={1.5}
+                zoomStart={0.5}
+                zoomEnd={1}
+                transitionStart={1}
+                transitionEnd={1.3}
+            />
             
             <article className="dollarBill-section">
                <h2>"100kr"</h2>
