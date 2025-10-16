@@ -95,10 +95,10 @@ export default function Trond() {
         
             
             
-            {/*<article className="dollarBill-section">
-               <h2>"100kr"</h2>
+            <article className="dollarBill-section">
+               <h3>"100kr"</h3>
                <img src={DollarBill} alt="Trond på en hundralapp" />
-            </article>*/}
+            </article>
             
             
            
