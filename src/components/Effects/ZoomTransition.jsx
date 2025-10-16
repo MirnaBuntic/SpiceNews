@@ -1,64 +1,68 @@
-import "../../styles/_zoomtransition.scss"
-import { useEffect, useRef } from "react"
+import "../../styles/_zoomtransition.scss";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ZoomTransition({
+  imageStart,
+  imageEnd,
+  altStart = "",
+  altEnd = "",
+  startScale = 1,
+  endScale = 1.5,
+  transitionDuration = 2, 
+}) {
+  const startRef = useRef(null);
+  const endRef = useRef(null);
+  const pinRef = useRef(null);
 
-    imageStart,
-    imageEnd,
-    altStart = "",
-    altEnd = "",
-    startScale = 1,
-    endScale = 1.5,
-    zoomStart = 0.5,
-    zoomEnd = 1,
-    transitionStart = 1,
-    transitionEnd = 1.3
+  useEffect(() => {
+    const startImg = startRef.current;
+    const endImg = endRef.current;
+    const pinWrapper = pinRef.current;
+    if (!startImg || !endImg || !pinWrapper) return;
 
-    }) {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: pinWrapper,
+        start: "top top",
+        end: `+=${window.innerHeight * transitionDuration}`,
+        scrub: true,
+        pin: true,
+      },
+    });
 
-    const startRef = useRef(null);
-    const endRef = useRef(null);
 
-    useEffect(() => {
-        const startImg = startRef.current
-        const endImg = endRef.current
-        if (!startImg || !endImg) return;
+    tl.to(startImg, { scale: endScale, opacity: 0, ease: "none" }, 0);
 
-        const onScroll = () => {
-            const position = startImg.getBoundingClientRect()
-            const viewportHeight = window.innerHeight
+    tl.fromTo(endImg, { opacity: 0 }, { opacity: 1, ease: "none" }, 0);
 
-            let zoomProgress = (1 - position.top / viewportHeight - zoomStart) / (zoomEnd - zoomStart)
-            zoomProgress = Math.min(Math.max(zoomProgress, 0), 1)
+    return () => {
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+      tl.kill();
+    };
+  }, [startScale, endScale, transitionDuration]);
 
-            const scale = startScale + zoomProgress * (endScale - startScale)
-            startImg.style.transform = `scale(${scale})`
-
-            let transitionProgress = (1 - position.top / viewportHeight - transitionStart) / (transitionEnd - transitionStart)
-            transitionProgress = Math.min(Math.max(transitionProgress, 0), 1)
-
-            startImg.style.opacity = 1 - transitionProgress
-            endImg.style.opacity = transitionProgress
-            endImg.style.filter = `contrast(${1 + transitionProgress * 0.1}) saturate(${1 + transitionProgress * 0.1})`
-
-            if (transitionProgress > 1) {
-                startImg.style.display = "none"
-            } else {
-                startImg.style.display = "block"
-            }
-
-        }
-
-        window.addEventListener("scroll", onScroll)
-        return () => window.removeEventListener("scroll", onScroll)
-    }, [startScale, endScale, zoomStart, zoomEnd, transitionStart, transitionEnd])
-
-    return (
-        <section className="zoom-section">
-            <div className="zoom-container">
-                <img ref={startRef} src={imageStart} alt={altStart} className="zoom-image base" />
-                <img ref={endRef} src={imageEnd} alt={altEnd} className="zoom-image overlay" />
-            </div>
-        </section>
-    )
+  return (
+    <article className="zoom-section">
+      <div className="zoom-container">
+        <div className="pin-wrapper" ref={pinRef}>
+          <img
+            ref={startRef}
+            src={imageStart}
+            alt={altStart}
+            className="zoom-image base"
+          />
+          <img
+            ref={endRef}
+            src={imageEnd}
+            alt={altEnd}
+            className="zoom-image overlay"
+          />
+        </div>
+      </div>
+    </article>
+  );
 }

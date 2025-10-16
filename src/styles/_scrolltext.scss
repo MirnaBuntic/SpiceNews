@@ -1,0 +1,24 @@
+.scroll-text {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  opacity: 1 !important;
+  z-index: 10;
+
+  p {
+    margin: 1rem 0;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: white;
+  }
+
+  // Startvärden för animation
+  opacity: 0;
+  transform: translateY(50px);
+
+  // Fallback så texten inte döljs av föräldrar
+  position: relative;
+  z-index: 2;
+}

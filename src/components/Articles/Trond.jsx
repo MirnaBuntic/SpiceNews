@@ -2,6 +2,7 @@ import HeroScroll from "../Effects/HeroScroll"
 import ImgScrollSwap from "../Effects/ImgScrollSwap"
 import ScrollVideo from "../Effects/ScrollVideo"
 import ZoomTransition from "../Effects/ZoomTransition"
+import ScrollText from "../Effects/ScrollText"
 import DollarBill from "../../img/Trond/DollarBill_Trond.jpg"
 import Busk1 from "../../img/Trond/Busk1.png"
 import Busk2 from "../../img/Trond/Busk2.png"
@@ -15,6 +16,7 @@ import "../../styles/_trond.scss"
 
 
 export default function Trond() {
+    const transitionDuration = 2;
     return (
         <section className="trond-article">
 
@@ -29,7 +31,7 @@ export default function Trond() {
                 altOverlay1="Lommelykt av"
                 altOverlay2="Lommelykt på"
                 flipCount={2}
-                flipSpeed={0.5}
+                flipSpeed={0.8}
                 delayScroll={0.1}
                 overlayScrollOffset={0.8}
                 className="my-flipbook"
@@ -60,16 +62,42 @@ export default function Trond() {
                 altEnd="Trond under intervjun"
                 startScale={1}
                 endScale={1.5}
-                zoomStart={0.5}
-                zoomEnd={1}
-                transitionStart={1}
-                transitionEnd={1.3}
+                transitionDuration={transitionDuration}
             />
+
+          
+                
+            <ScrollText transitionDuration={transitionDuration}>
+                <p>
+                På trappene utenfor Halden Togstasjon møter vi Trond Henriksen, mange
+                husker han som “Norges farligste mann” og en beryktet person innen
+                det kriminelle miljøet på 90/tidlig 2000-tallet.
+                </p>
+                <p>
+                Trond møter oss med et vennlig smil og et solid håndtrykk. Han har
+                siden 2011 jobbet for Kirkens bymisjon, og viser oss stolt rundt i
+                togstasjonens lokaler som i dag fungerer som café. Over gaten ligger
+                det gamle godshuset som ble bygd i 1879, dette er i dag restaurert
+                og driftes av bymisjonen som kurs- och konferansesenter och är en
+                av Trond sine mange hjertesaker för byen.
+                </p>
+                <p>“Har dere spist?” - spør han oss</p>
+                <p>“Nei, i grunn ikke” - svarer vi i kor</p>
+                <p>
+                Han viser oss inn på kjøkkenet og en kollega av Trond serverer oss
+                dagens suppe som vi balanserer over gaten og inn i det gamle
+                godshuset. Her setter vi oss ned for en prat med Trond.
+                </p>
+                <p>Her er hans historie.</p>
+            </ScrollText>
+        
             
-            <article className="dollarBill-section">
+            
+            {/*<article className="dollarBill-section">
                <h2>"100kr"</h2>
                <img src={DollarBill} alt="Trond på en hundralapp" />
-            </article>
+            </article>*/}
+            
             
            
 
