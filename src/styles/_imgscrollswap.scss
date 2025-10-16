@@ -24,7 +24,7 @@
     bottom: 14.7rem;
     right: 0;
     color: black;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     opacity: 0;
     transform: rotate(-30deg); 
     transform-origin: bottom right;
@@ -32,5 +32,23 @@
     3px 3px 6px rgba(0, 0, 0, 0.8),  
     6px 6px 12px rgba(0, 0, 0, 0.6),  
     0 0 2px rgba(0, 0, 0, 0.9); 
+  }
+
+  &::after {  
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh; 
+    pointer-events: none;
+    z-index: 15;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 1) 100%
+    );
   }
 }
