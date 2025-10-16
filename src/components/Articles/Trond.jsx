@@ -16,7 +16,7 @@ import "../../styles/_trond.scss"
 
 
 export default function Trond() {
-    const transitionDuration = 2;
+    const transitionDuration = 3;
     return (
         <section className="trond-article">
 
@@ -68,12 +68,11 @@ export default function Trond() {
           
                 
             <ScrollText transitionDuration={transitionDuration}>
-                <p>
+                <p className="text">
                 På trappene utenfor Halden Togstasjon møter vi Trond Henriksen, mange
                 husker han som “Norges farligste mann” og en beryktet person innen
                 det kriminelle miljøet på 90/tidlig 2000-tallet.
-                </p>
-                <p>
+                
                 Trond møter oss med et vennlig smil og et solid håndtrykk. Han har
                 siden 2011 jobbet for Kirkens bymisjon, og viser oss stolt rundt i
                 togstasjonens lokaler som i dag fungerer som café. Over gaten ligger
@@ -81,14 +80,17 @@ export default function Trond() {
                 og driftes av bymisjonen som kurs- och konferansesenter och är en
                 av Trond sine mange hjertesaker för byen.
                 </p>
-                <p>“Har dere spist?” - spør han oss</p>
-                <p>“Nei, i grunn ikke” - svarer vi i kor</p>
-                <p>
+
+                <p className="text-1">“Har dere spist?” - spør han oss</p>
+
+                <p className="text-2">“Nei, i grunn ikke” - svarer vi i kor</p>
+
+                <p className="text-3">
                 Han viser oss inn på kjøkkenet og en kollega av Trond serverer oss
                 dagens suppe som vi balanserer over gaten og inn i det gamle
-                godshuset. Her setter vi oss ned for en prat med Trond.
+                godshuset. Her setter vi oss ned for en prat med Trond. Her er hans historie.
                 </p>
-                <p>Her er hans historie.</p>
+
             </ScrollText>
         
             
