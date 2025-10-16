@@ -94,11 +94,11 @@ export default function Trond() {
             </ScrollText>
         
             
-            
-            <article className="dollarBill-section">
+            {/*<article className="dollarBill-section">
                <h3>"100kr"</h3>
                <img src={DollarBill} alt="Trond på en hundralapp" />
-            </article>
+            </article>*/}
+            
             
             
            
