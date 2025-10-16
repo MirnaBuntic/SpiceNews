@@ -40,7 +40,7 @@ export default function Trond() {
             <article className="story-intro">
                 <p>Lommelykten lyser i ansiktet på de to fengselsrømmlingene.</p>
 
-                <p>Med bagger fulle av smuglet narkotika befinner seg Trond og Morten nå i et dilemma.</p>
+                <p>Med bagger fulle av smuglet narkotika befinner Trond og Morten seg nå i et dilemma.</p>
 
                 <p>Overgi seg eller fortsette på rømmen med 2 politibetjente som gisler?</p>
             </article>
@@ -77,8 +77,8 @@ export default function Trond() {
                 siden 2011 jobbet for Kirkens bymisjon, og viser oss stolt rundt i
                 togstasjonens lokaler som i dag fungerer som café. Over gaten ligger
                 det gamle godshuset som ble bygd i 1879, dette er i dag restaurert
-                og driftes av bymisjonen som kurs- och konferansesenter och är en
-                av Trond sine mange hjertesaker för byen.
+                og driftes av bymisjonen som kurs- og konferansesenter og er en
+                av Trond sine mange hjertesaker for byen.
                 </p>
 
                 <p className="text-1">“Har dere spist?” - spør han oss</p>
@@ -88,7 +88,7 @@ export default function Trond() {
                 <p className="text-3">
                 Han viser oss inn på kjøkkenet og en kollega av Trond serverer oss
                 dagens suppe som vi balanserer over gaten og inn i det gamle
-                godshuset. Her setter vi oss ned for en prat med Trond. Her er hans historie.
+                godshuset. Her setter vi oss ned for en prat med Trond. Dette er hans historie.
                 </p>
 
             </ScrollText>
