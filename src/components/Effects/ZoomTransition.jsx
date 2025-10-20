@@ -31,9 +31,9 @@ export default function ZoomTransition({
         end: `+=${window.innerHeight * transitionDuration}`,
         scrub: true,
         pin: true,
+        pinSpacing: true, 
       },
     });
-
 
     tl.to(startImg, { scale: endScale, opacity: 0, ease: "none" }, 0);
 

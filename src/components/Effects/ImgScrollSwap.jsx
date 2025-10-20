@@ -46,6 +46,7 @@ export default function ImgScrollSwap({
             end: "bottom top",
             scrub: true,
             pin: true,
+            pinSpacing: true,
            },
         });
 
@@ -74,7 +75,7 @@ export default function ImgScrollSwap({
 
 
   return (
-    <div ref={containerRef} className={`img-scroll-flipbook ${className}`}>
+    <article ref={containerRef} className={`img-scroll-flipbook ${className}`}>
       <img
         ref={img1Ref}
         src={image1}
@@ -104,6 +105,6 @@ export default function ImgScrollSwap({
         <div ref={textRef} className="text-content"></div>
     
 
-    </div>
+    </article>
   );
 }

@@ -25,8 +25,8 @@ export default function ScrollText({ children, transitionDuration = 1 }) {
   }, [transitionDuration]);
 
   return (
-    <div ref={textRef} className="scroll-text">
+    <article ref={textRef} className="scroll-text">
       {children}
-    </div>
+    </article>
   );
 }
