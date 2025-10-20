@@ -9,7 +9,7 @@ import Busk2 from "../../img/Trond/Busk2.png"
 import Lommelykt1 from "../../img/Trond/Lommelykt1.png"
 import Lommelykt2 from "../../img/Trond/Lommelykt2.png"
 import Avis_animasjon from "../../img/Trond/Avis_animasjon_final.mp4"
-import Skog from "../../img/Trond/skog.jpg"
+import Kirkens_bymisjon from "../../img/Trond/kirkens_bymisjon.jpg"
 import Trond_intervju from "../../img/Trond/Trond_intervju.jpg"
 import "../../styles/_trond.scss"
 
@@ -30,7 +30,7 @@ export default function Trond() {
                 alt2="Busk nr 2"
                 altOverlay1="Lommelykt av"
                 altOverlay2="Lommelykt på"
-                flipCount={2}
+                flipCount={3}
                 flipSpeed={0.8}
                 delayScroll={0.1}
                 overlayScrollOffset={0.8}
@@ -56,7 +56,7 @@ export default function Trond() {
             </article>
 
             <ZoomTransition
-                imageStart={Skog}
+                imageStart={Kirkens_bymisjon}
                 imageEnd={Trond_intervju}
                 altStart="Kirkens Bymisjon"
                 altEnd="Trond under intervjun"
