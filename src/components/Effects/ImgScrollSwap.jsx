@@ -47,6 +47,8 @@ export default function ImgScrollSwap({
             scrub: true,
             pin: true,
             pinSpacing: true,
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
            },
         });
 

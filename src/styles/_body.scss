@@ -3,4 +3,6 @@ html, body, #root {
     display: block;
     place-items: normal;
     background-color: #fcf9f2bb;
+    overscroll-behavior: none;
+    --vh: 1vh;
 }

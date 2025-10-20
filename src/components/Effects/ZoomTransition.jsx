@@ -31,7 +31,11 @@ export default function ZoomTransition({
         end: `+=${window.innerHeight * transitionDuration}`,
         scrub: true,
         pin: true,
-        pinSpacing: true, 
+        pinSpacing: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+        fastScrollEnd: true,
+        markers: false, 
       },
     });
 
@@ -40,9 +44,10 @@ export default function ZoomTransition({
     tl.fromTo(endImg, { opacity: 0 }, { opacity: 1, ease: "none" }, 0);
 
     return () => {
-      ScrollTrigger.getAll().forEach((st) => st.kill());
+      tl.scrollTrigger?.kill();
       tl.kill();
     };
+
   }, [startScale, endScale, transitionDuration]);
 
   return (

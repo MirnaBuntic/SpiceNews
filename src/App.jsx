@@ -3,9 +3,27 @@ import Layout from './components/Layout';
 import Home from './components/home';
 import Trond from './components/Articles/Trond';
 import './styles/global.scss';
+import { useEffect } from 'react';
 
 
 export default function App() {
+
+    useEffect(() => {
+    const setVh = () => {
+      document.documentElement.style.setProperty("--vh", `${window.innerHeight * 0.01}px`);
+    };
+
+    setVh();
+
+    const handleResize = () => {
+      setVh();
+      if (window.ScrollTrigger) window.ScrollTrigger.refresh();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <Layout>

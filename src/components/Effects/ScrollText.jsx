@@ -20,6 +20,8 @@ export default function ScrollText({ children, transitionDuration = 1 }) {
         start: "top bottom",
         end: "bottom top",
         scrub: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
       },
     });
   }, [transitionDuration]);

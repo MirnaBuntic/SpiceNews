@@ -24,6 +24,8 @@ export default function ScrollVideo({ src, className = "", playbackRate = 1 }) {
       onEnterBack: () => video.play(),
       onLeave: () => video.pause(),
       onLeaveBack: () => video.pause(),
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
     })
 
     return () => {
