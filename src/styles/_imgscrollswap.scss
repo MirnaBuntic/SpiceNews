@@ -1,5 +1,6 @@
 .pin-spacer {
   overflow: hidden !important;
+  background-color: black;
 }
 
 .img-scroll-flipbook {
@@ -7,6 +8,7 @@
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
+  background-color: black;
 
   img {
     position: absolute;
