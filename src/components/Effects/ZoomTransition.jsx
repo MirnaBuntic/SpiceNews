@@ -24,6 +24,11 @@ export default function ZoomTransition({
     const pinWrapper = pinRef.current;
     if (!startImg || !endImg || !pinWrapper) return;
 
+    const vh =
+    typeof window !== "undefined" && window.visualViewport
+      ? window.visualViewport.height
+      : window.innerHeight;
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: pinWrapper,
