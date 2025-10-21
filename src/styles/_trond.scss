@@ -58,6 +58,10 @@
         display: flex;
         justify-content: center;
         margin-bottom: 5rem;
+
+        audio {
+            width: 350px;
+        }
     }
 
     .school, .frank {
