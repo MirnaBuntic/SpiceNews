@@ -24,36 +24,54 @@ export default function ZoomTransition({
     const pinWrapper = pinRef.current;
     if (!startImg || !endImg || !pinWrapper) return;
 
-    const vh =
-    typeof window !== "undefined" && window.visualViewport
+    const getVh = () => {
+    return window.visualViewport
       ? window.visualViewport.height
       : window.innerHeight;
+  };
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: pinWrapper,
-        start: "top top",
-        end: `+=${vh * transitionDuration}`,
-        scrub: true,
-        pin: true,
-        pinSpacing: true,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-        fastScrollEnd: true,
-        markers: false, 
-      },
-    });
+  let vh = getVh();
 
-    tl.to(startImg, { scale: endScale, opacity: 0, ease: "none" }, 0);
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: pinWrapper,
+      start: "top top",
+      end: () => `+=${getVh() * transitionDuration}`, 
+      scrub: true,
+      pin: true,
+      pinSpacing: true,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+      fastScrollEnd: true,
+      markers: false,
+    },
+  });
 
-    tl.fromTo(endImg, { opacity: 0 }, { opacity: 1, ease: "none" }, 0);
+  tl.to(startImg, { scale: endScale, opacity: 0, ease: "none" }, 0);
+  tl.fromTo(endImg, { opacity: 0 }, { opacity: 1, ease: "none" }, 0);
 
-    return () => {
-      tl.scrollTrigger?.kill();
-      tl.kill();
-    };
+  const updateViewport = () => {
+    vh = getVh();
+    document.documentElement.style.setProperty("--vh", `${vh * 0.01}px`);
+    ScrollTrigger.refresh();
+  };
 
-  }, [startScale, endScale, transitionDuration]);
+  window.addEventListener("resize", updateViewport);
+  window.addEventListener("orientationchange", updateViewport);
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", updateViewport);
+  }
+
+  return () => {
+    tl.scrollTrigger?.kill();
+    tl.kill();
+    window.removeEventListener("resize", updateViewport);
+    window.removeEventListener("orientationchange", updateViewport);
+    if (window.visualViewport) {
+      window.visualViewport.removeEventListener("resize", updateViewport);
+    }
+  };
+}, [startScale, endScale, transitionDuration]);
 
   return (
     <article className="zoom-section">
