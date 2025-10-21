@@ -51,13 +51,29 @@
     .childhood {
         color: black;
         font-size: 1.2rem;
-        margin: -10rem 4rem 4rem 4rem;
+        margin: -10rem 3rem 4rem 3rem;
     }
     
     .trond-audio {
         display: flex;
         justify-content: center;
-        margin-bottom: 8rem;
+        margin-bottom: 5rem;
+
+        audio {
+            width: 400px;
+        }
+    }
+
+    .school, .frank {
+        color: black;
+        font-size: 1.2rem;
+        margin: 3rem 3rem 4rem 3rem;
+    }
+
+    .frank {
+        h4 {
+            font-size: 1.4rem;
+        }
     }
 
     .dollarBill-section {

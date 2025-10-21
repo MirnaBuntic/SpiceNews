@@ -114,6 +114,26 @@ export default function Trond() {
                 </article>
             </section>
 
+            <section className="school">
+                <p>Barndommen utenfor husets fire vegger ble også tilbrakt på Ekeberg skole. Der trivdes Trond godt frem til han ble rammet av hudsykdommen Knuterosen og ble en periode fraværende fra skolen.</p>
+
+                <p>(Förklaring av sjukdomen)</p>
+
+                <p>Tilbake etter sykdomsperioden ble Trond møtt med et nytt fag. Engelsk, noe Trond fort forstod at han ikke mestret. Følelsen av å ikke mestre engelsken førte til at han valgte å droppe ut av faget, som senere ble til å skulke hele skoledagen.</p>
+            </section>
+
+            <section className="frank">
+                <h4>De første skrittene inn i rusmiljøet</h4>
+
+                <p>Han kunne ikke dra hjem, så tidsfordrivet ble å reise til byen, mer spesifikt trappene ved Østbanehallen i hjertet av Oslo. Der traff han andre ungdommer som delte de samme utfordringene. Spesielt en gutt skilte seg ut for Trond,nemlig 19 år gamle Frank.</p>
+
+                <p>Med skinnjakke, det faktumet at han var noen år eldre og hadde draget på damene, gjorde at Frank ble en person de aller fleste i gjengen så opp til. Som 12-åring prøvde Trond for første gang narkotiske stoffer. Dette var utelukkende for å imponere Frank. Før dette hadde synet på narkotika og rus aldri vært tiltalende. Det hadde vært noe som har vært skummelt og som ifølge Tronds mor potensielt kunne føre til død.</p>
+
+                <p>Til tross for dette prøvde Trond hasjpipe og fikk et voldsomt hosteanfall. Han likte rusen, men det var ikke det som var viktigst. Det var å imponere Frank. Det var det viktigste.</p>
+
+                <p>(skinnjacka)</p>
+            </section>
+
             <section>  
                 <article className="dollarBill-section">
                 <h3>"100kr"</h3>
