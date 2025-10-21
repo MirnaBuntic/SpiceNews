@@ -98,6 +98,8 @@ export default function Trond() {
 
             <section>
                 <article className="childhood">
+                    <h4>”Jeg pleier å si at jeg er født i Vålerengatunnelen"</h4>
+
                     <p>Trond er nå bosatt i Halden og nærmer seg 60 år, men kommer opprinnelig fra østkanten, nærmere bestemt Vålerenga i Oslo. </p>
 
                     <p>-”Jeg pleier å si at jeg er født i Vålerengatunnelen", forteller Trond. Der vokste han opp i enkle kår sammen med sin mor og to søsken.</p>
@@ -115,6 +117,8 @@ export default function Trond() {
             </section>
 
             <section className="school">
+                <h4></h4>
+
                 <p>Barndommen utenfor husets fire vegger ble også tilbrakt på Ekeberg skole. Der trivdes Trond godt frem til han ble rammet av hudsykdommen Knuterosen og ble en periode fraværende fra skolen.</p>
 
                 <p>(Förklaring av sjukdomen)</p>
@@ -127,24 +131,40 @@ export default function Trond() {
 
                 <p>Han kunne ikke dra hjem, så tidsfordrivet ble å reise til byen, mer spesifikt trappene ved Østbanehallen i hjertet av Oslo. Der traff han andre ungdommer som delte de samme utfordringene. Spesielt en gutt skilte seg ut for Trond, nemlig 19 år gamle Frank.</p>
 
-                <p>Med skinnjakke, det faktumet at han var noen år eldre og hadde draget på damene, gjorde at Frank ble en person de aller fleste i gjengen så opp til. Som 12-åring prøvde Trond for første gang narkotiske stoffer. Dette var utelukkende for å imponere Frank. Før dette hadde synet på narkotika og rus aldri vært tiltalende. Det hadde vært noe som har vært skummelt og som ifølge Tronds mor potensielt kunne føre til død.</p>
-
-                <p>Til tross for dette prøvde Trond hasjpipe og fikk et voldsomt hosteanfall. Han likte rusen, men det var ikke det som var viktigst. Det var å imponere Frank. Det var det viktigste.</p>
+                <p>Med skinnjakke, det faktumet at han var noen år eldre og hadde draget på damene, gjorde at Frank ble en person de aller fleste i gjengen så opp til. </p>
 
                 <p>(skinnjacka)</p>
+                    
+                <p>Som 12-åring prøvde Trond for første gang narkotiske stoffer. Dette var utelukkende for å imponere Frank. Før dette hadde synet på narkotika og rus aldri vært tiltalende. Det hadde vært noe som har vært skummelt og som ifølge Tronds mor potensielt kunne føre til død.</p>
+
+                <p>Til tross for dette prøvde Trond hasjpipe og fikk et voldsomt hosteanfall. Han likte rusen, men det var ikke det som var viktigst. Det var å imponere Frank. Det var det viktigste.</p>
             </section>
 
             <section>  
                 <article className="dollarBill-section">
-                <h3>"100kr"</h3>
-                <img src={DollarBill} alt="Trond på en hundralapp" />
+                    <h3>"100kr"</h3>
+                    <img src={DollarBill} alt="Trond på en hundralapp" />
                 </article>
     
                 <article className="text-container">
                     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                 </article>
             </section>
-    
+
+            <section className="end-story">
+                <h4>Vendepunktet</h4>
+
+                <p>Å ville klare alt selv var en dominerende tanke og det var først godt inn i 20-årene at det å oppsøke hjelp for rusmisbruket streifet Tronds hode. Det uskyldige forsøket på å imponere Frank hadde da utviklet seg til å bli et fullverdig heroinmisbruk. -"Når man først har kommet dit, så blir veien komplisert".</p>
+
+                <p>Etter 13 år med svingdør inn og ut av fengsel (første gang som 14-åring), sonet han sent i 20-årene ved Ullersmo fengsel. Der spurte Trond om hjelp for første gang. Resultatet ble en henvisning med plass på Tyrili behandlingsinstitusjon, hvor han tilbrakte flere år.</p>
+
+                <p>Veien ut av rusen var en krevende, lang og vanskelig vei. Det viste seg at én er ikke ferdig rehabilitert etter 3-4 måneder, som Trond først tenkte. Avhengigheten er noe du bærer med deg i lang tid, om ikke livet ut.</p>
+
+                <p>(video som smiler)</p>
+
+                <p>En tankefull Trond trekker på smilebåndene og sier -”Nå skal jeg, om bare en drøy måned, feire at det er 15 år siden sist jeg satt meg en sprøyte heroin, det gleder jeg meg til!"</p>
+            </section>
+
         </section>
     )
 }
