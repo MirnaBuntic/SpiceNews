@@ -48,12 +48,16 @@
         }
     }
 
+    .space-container {
+        padding: 35rem 0;
+    }
+
     .dollarBill-section {
         text-align: center;
-        padding: 10rem 0 10rem 0;
-        z-index: 0;
+        padding: 5rem 0 10rem 0;
         position: relative;
-        margin-top: 85rem;
+        z-index: 1;
+
 
         h3 {
             font-size: 1.5rem;
@@ -77,4 +81,3 @@
         }
     }
 }
-
