@@ -53,7 +53,7 @@
         padding: 10rem 0 10rem 0;
         z-index: 0;
         position: relative;
-        margin-top: 40rem;
+        margin-top: 85rem;
 
         h3 {
             font-size: 1.5rem;
@@ -78,10 +78,3 @@
     }
 }
 
-@media (min-width: 400px) {
-    .trond-article {
-        .dollarBill-section {
-            margin-top: 85rem;
-        }
-    }
-}
