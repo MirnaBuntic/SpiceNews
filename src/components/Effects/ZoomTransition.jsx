@@ -52,10 +52,10 @@ export default function ZoomTransition({
 
     tl.fromTo(endImg, {
       opacity: 0,
-      scale: startScale,
+      scale: 1,
     }, {
       opacity: 1,
-      scale: endScale,
+      scale: 1,
       ease: "none",
       force3D: true,
     }, 0);
