@@ -125,7 +125,7 @@ export default function Trond() {
             <section className="frank">
                 <h4>De første skrittene inn i rusmiljøet</h4>
 
-                <p>Han kunne ikke dra hjem, så tidsfordrivet ble å reise til byen, mer spesifikt trappene ved Østbanehallen i hjertet av Oslo. Der traff han andre ungdommer som delte de samme utfordringene. Spesielt en gutt skilte seg ut for Trond,nemlig 19 år gamle Frank.</p>
+                <p>Han kunne ikke dra hjem, så tidsfordrivet ble å reise til byen, mer spesifikt trappene ved Østbanehallen i hjertet av Oslo. Der traff han andre ungdommer som delte de samme utfordringene. Spesielt en gutt skilte seg ut for Trond, nemlig 19 år gamle Frank.</p>
 
                 <p>Med skinnjakke, det faktumet at han var noen år eldre og hadde draget på damene, gjorde at Frank ble en person de aller fleste i gjengen så opp til. Som 12-åring prøvde Trond for første gang narkotiske stoffer. Dette var utelukkende for å imponere Frank. Før dette hadde synet på narkotika og rus aldri vært tiltalende. Det hadde vært noe som har vært skummelt og som ifølge Tronds mor potensielt kunne føre til død.</p>
 
