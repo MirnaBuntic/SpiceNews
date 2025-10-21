@@ -42,7 +42,7 @@ export default function Trond() {
 
                 <p>Med bagger fulle av smuglet narkotika befinner Trond og Morten seg nå i et dilemma.</p>
 
-                <p>Overgi seg eller fortsette på rømmen med 2 politibetjente som gisler?</p>
+                <p>Overgi seg eller fortsette på rømmen med 2 menn som gisler, der en av mennene er politi?</p>
             </article>
 
             <ScrollVideo 
@@ -93,6 +93,19 @@ export default function Trond() {
                     </p>
 
                 </ScrollText>
+            </section>
+
+            <section>
+                <article className="childhood">
+                    <p>Trond er nå bosatt i Halden og nærmer seg 60 år, men kommer opprinnelig fra østkanten, nærmere bestemt Vålerenga i Oslo. </p>
+
+                    <p>-”Jeg pleier å si at jeg er født i Vålerengatunnelen", forteller Trond. Der vokste han opp i enkle kår sammen med sin mor og to søsken.</p>
+
+                    <p>Barndommen ble beskrevet som fin, men at den også bar preg av utfordringer. Oppveksten var preget av mye rus og utrygghet. Moren omgikk seg stadig med menn som slet med rus, til tross for at hun selv var avholds. Dette gjorde at barna tidlig ble eksponert for rus. </p>
+
+                    <p>-”Jeg husker godt det da jeg skulle prøve den hasjpipa for første gang. Jeg trodde jeg skulle dø, for mamma sa at hvis man brukte narkotika så kunne man dø” forteller han på en spøkefull måte.</p>
+                </article>
+                
             </section>
 
             <section>  
