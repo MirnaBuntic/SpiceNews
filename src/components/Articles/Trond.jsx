@@ -107,7 +107,7 @@ export default function Trond() {
                     <p>-”Jeg husker godt det da jeg skulle prøve den hasjpipa for første gang. Jeg trodde jeg skulle dø, for mamma sa at hvis man brukte narkotika så kunne man dø” forteller han på en spøkefull måte.</p>
                 </article>
                 
-                <article>
+                <article className="trond-audio">
                     <audio controls>
                         <source src={Trond1} type="audio/mpeg" />
                     </audio>
