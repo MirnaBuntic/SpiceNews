@@ -92,8 +92,6 @@ export default function Trond() {
                 </p>
 
             </ScrollText>
-        
-            <div className="space-container"></div>
             
             <article className="dollarBill-section">
                <h3>"100kr"</h3>
