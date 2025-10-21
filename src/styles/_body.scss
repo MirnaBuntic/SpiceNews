@@ -5,4 +5,8 @@ html, body, #root {
     background-color: #fcf9f2bb;
     overscroll-behavior: none;
     --vh: 1vh;
+    height: calc(var(--vh, 1vh) * 100);
+    min-height: calc(var(--vh, 1vh) * 100);
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
