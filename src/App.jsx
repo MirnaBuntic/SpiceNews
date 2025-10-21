@@ -22,27 +22,28 @@ export default function App() {
 
     setVh();
 
+    const refreshScroll = () => ScrollTrigger.refresh();
+
     window.addEventListener("resize", setVh);
     window.addEventListener("orientationchange", setVh);
     if (window.visualViewport) {
       window.visualViewport.addEventListener("resize", setVh);
+      window.visualViewport.addEventListener("scroll", setVh);
     }
 
-    const refreshST = () => ScrollTrigger.refresh();
-    ScrollTrigger.refresh(); 
-    window.addEventListener("resize", refreshST);
-    window.addEventListener("orientationchange", refreshST);
+    window.addEventListener("resize", refreshScroll);
+    window.addEventListener("orientationchange", refreshScroll);
 
     return () => {
       window.removeEventListener("resize", setVh);
       window.removeEventListener("orientationchange", setVh);
-      window.removeEventListener("resize", refreshST);
-      window.removeEventListener("orientationchange", refreshST);
+      window.removeEventListener("resize", refreshScroll);
+      window.removeEventListener("orientationchange", refreshScroll);
       if (window.visualViewport) {
         window.visualViewport.removeEventListener("resize", setVh);
+        window.visualViewport.removeEventListener("scroll", setVh);
       }
     };
-
   }, []);
 
   return (
