@@ -24,54 +24,53 @@ export default function ZoomTransition({
     const pinWrapper = pinRef.current;
     if (!startImg || !endImg || !pinWrapper) return;
 
-    const getVh = () => {
-    return window.visualViewport
-      ? window.visualViewport.height
-      : window.innerHeight;
-  };
-
-  let vh = getVh();
-
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: pinWrapper,
-      start: "top top",
-      end: () => `+=${getVh() * transitionDuration}`, 
-      scrub: true,
-      pin: true,
-      pinSpacing: true,
-      anticipatePin: 1,
-      invalidateOnRefresh: true,
-      fastScrollEnd: true,
-      markers: false,
-    },
-  });
-
-  tl.to(startImg, { scale: endScale, opacity: 0, ease: "none" }, 0);
-  tl.fromTo(endImg, { opacity: 0 }, { opacity: 1, ease: "none" }, 0);
-
-  const updateViewport = () => {
-    vh = getVh();
+    const vh = window.innerHeight;
     document.documentElement.style.setProperty("--vh", `${vh * 0.01}px`);
-    ScrollTrigger.refresh();
-  };
 
-  window.addEventListener("resize", updateViewport);
-  window.addEventListener("orientationchange", updateViewport);
-  if (window.visualViewport) {
-    window.visualViewport.addEventListener("resize", updateViewport);
-  }
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: pinWrapper,
+        start: "top top",
+        end: `+=${vh * transitionDuration}`,
+        scrub: true,
+        pin: true,
+        pinSpacing: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+        fastScrollEnd: true,
+        markers: false,
+        pinType: window.innerWidth < 768 ? "transform" : "fixed",
+      },
+    });
 
-  return () => {
-    tl.scrollTrigger?.kill();
-    tl.kill();
-    window.removeEventListener("resize", updateViewport);
-    window.removeEventListener("orientationchange", updateViewport);
-    if (window.visualViewport) {
-      window.visualViewport.removeEventListener("resize", updateViewport);
-    }
-  };
-}, [startScale, endScale, transitionDuration]);
+    tl.to(startImg, {
+      scale: endScale,
+      opacity: 0,
+      ease: "none",
+      force3D: true,
+    }, 0);
+
+    tl.fromTo(endImg, {
+      opacity: 0,
+      scale: startScale,
+    }, {
+      opacity: 1,
+      scale: endScale,
+      ease: "none",
+      force3D: true,
+    }, 0);
+
+    const handleResize = () => {
+      ScrollTrigger.refresh();
+    };
+    window.addEventListener("orientationchange", handleResize);
+
+    return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+      window.removeEventListener("orientationchange", handleResize);
+    };
+  }, [startScale, endScale, transitionDuration]);
 
   return (
     <article className="zoom-section">
