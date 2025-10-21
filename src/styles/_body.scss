@@ -3,6 +3,9 @@ html, body, #root {
     display: block;
     place-items: normal;
     background-color: #fcf9f2bb;
-    overscroll-behavior: none;
+    overscroll-behavior-y: none;
     --vh: 1vh;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
