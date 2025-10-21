@@ -24,52 +24,30 @@ export default function ZoomTransition({
     const pinWrapper = pinRef.current;
     if (!startImg || !endImg || !pinWrapper) return;
 
-    const vh = window.innerHeight;
-    document.documentElement.style.setProperty("--vh", `${vh * 0.01}px`);
-
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: pinWrapper,
         start: "top top",
-        end: `+=${vh * transitionDuration}`,
+        end: `+=${window.innerHeight * transitionDuration}`,
         scrub: true,
         pin: true,
         pinSpacing: true,
         anticipatePin: 1,
         invalidateOnRefresh: true,
         fastScrollEnd: true,
-        markers: false,
-        pinType: window.innerWidth < 768 ? "transform" : "fixed",
+        markers: false, 
       },
     });
 
-    tl.to(startImg, {
-      scale: endScale,
-      opacity: 0,
-      ease: "none",
-      force3D: true,
-    }, 0);
+    tl.to(startImg, { scale: endScale, opacity: 0, ease: "none" }, 0);
 
-    tl.fromTo(endImg, {
-      opacity: 0,
-      scale: 1,
-    }, {
-      opacity: 1,
-      scale: 1,
-      ease: "none",
-      force3D: true,
-    }, 0);
-
-    const handleResize = () => {
-      ScrollTrigger.refresh();
-    };
-    window.addEventListener("orientationchange", handleResize);
+    tl.fromTo(endImg, { opacity: 0 }, { opacity: 1, ease: "none" }, 0);
 
     return () => {
       tl.scrollTrigger?.kill();
       tl.kill();
-      window.removeEventListener("orientationchange", handleResize);
     };
+
   }, [startScale, endScale, transitionDuration]);
 
   return (
