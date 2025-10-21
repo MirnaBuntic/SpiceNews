@@ -55,55 +55,57 @@ export default function Trond() {
                 <h2>Men hvordan havnet de her?</h2>
             </article>
 
-            <ZoomTransition
-                imageStart={Kirkens_bymisjon}
-                imageEnd={Trond_intervju}
-                altStart="Kirkens Bymisjon"
-                altEnd="Trond under intervjun"
-                startScale={1}
-                endScale={1.5}
-                transitionDuration={transitionDuration}
-            />
+            <section className="transition-block">
+                <ZoomTransition
+                    imageStart={Kirkens_bymisjon}
+                    imageEnd={Trond_intervju}
+                    altStart="Kirkens Bymisjon"
+                    altEnd="Trond under intervjun"
+                    startScale={1}
+                    endScale={1.5}
+                    transitionDuration={transitionDuration}
+                />
 
-          
-                
-            <ScrollText transitionDuration={transitionDuration}>
-                <p className="text">
-                På trappene utenfor Halden Togstasjon møter vi Trond Henriksen, mange
-                husker han som “Norges farligste mann” og en beryktet person innen
-                det kriminelle miljøet på 90/tidlig 2000-tallet.
-                
-                Trond møter oss med et vennlig smil og et solid håndtrykk. Han har
-                siden 2011 jobbet for Kirkens bymisjon, og viser oss stolt rundt i
-                togstasjonens lokaler som i dag fungerer som café. Over gaten ligger
-                det gamle godshuset som ble bygd i 1879, dette er i dag restaurert
-                og driftes av bymisjonen som kurs- og konferansesenter og er en
-                av Trond sine mange hjertesaker for byen.
-                </p>
-
-                <p className="text-1">“Har dere spist?” - spør han oss</p>
-
-                <p className="text-2">“Nei, i grunn ikke” - svarer vi i kor</p>
-
-                <p className="text-3">
-                Han viser oss inn på kjøkkenet og en kollega av Trond serverer oss
-                dagens suppe som vi balanserer over gaten og inn i det gamle
-                godshuset. Her setter vi oss ned for en prat med Trond. Dette er hans historie.
-                </p>
-
-            </ScrollText>
-        
-            <div className="space-container"></div>
             
-            <article className="dollarBill-section">
-               <h3>"100kr"</h3>
-               <img src={DollarBill} alt="Trond på en hundralapp" />
-            </article>
-  
-            <article className="text-container">
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            </article>
-           
+                    
+                <ScrollText transitionDuration={transitionDuration}>
+                    <p className="text">
+                    På trappene utenfor Halden Togstasjon møter vi Trond Henriksen, mange
+                    husker han som “Norges farligste mann” og en beryktet person innen
+                    det kriminelle miljøet på 90/tidlig 2000-tallet.
+                    
+                    Trond møter oss med et vennlig smil og et solid håndtrykk. Han har
+                    siden 2011 jobbet for Kirkens bymisjon, og viser oss stolt rundt i
+                    togstasjonens lokaler som i dag fungerer som café. Over gaten ligger
+                    det gamle godshuset som ble bygd i 1879, dette er i dag restaurert
+                    og driftes av bymisjonen som kurs- og konferansesenter og er en
+                    av Trond sine mange hjertesaker for byen.
+                    </p>
+
+                    <p className="text-1">“Har dere spist?” - spør han oss</p>
+
+                    <p className="text-2">“Nei, i grunn ikke” - svarer vi i kor</p>
+
+                    <p className="text-3">
+                    Han viser oss inn på kjøkkenet og en kollega av Trond serverer oss
+                    dagens suppe som vi balanserer over gaten og inn i det gamle
+                    godshuset. Her setter vi oss ned for en prat med Trond. Dette er hans historie.
+                    </p>
+
+                </ScrollText>
+            </section>
+
+            <section>  
+                <article className="dollarBill-section">
+                <h3>"100kr"</h3>
+                <img src={DollarBill} alt="Trond på en hundralapp" />
+                </article>
+    
+                <article className="text-container">
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                </article>
+            </section>
+    
         </section>
     )
 }

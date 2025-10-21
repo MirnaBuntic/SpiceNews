@@ -28,7 +28,7 @@ export default function ZoomTransition({
       scrollTrigger: {
         trigger: pinWrapper,
         start: "top top",
-        end: `+=${window.innerHeight * transitionDuration}`,
+        end: `+=${window.innerHeight * 3}`,
         scrub: true,
         pin: true,
         pinSpacing: true,
