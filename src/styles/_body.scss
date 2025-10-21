@@ -1,12 +1,13 @@
-html, body, #root {
+html {
+    --vh: 1vh;
+    height: 100%;
+}
+
+body, #root {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: block;
-    place-items: normal;
     background-color: #fcf9f2bb;
     overscroll-behavior: none;
-    --vh: 1vh;
-    height: calc(var(--vh, 1vh) * 100);
-    min-height: calc(var(--vh, 1vh) * 100);
+    min-height: 100%;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
 }
