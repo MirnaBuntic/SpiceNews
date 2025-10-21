@@ -3,6 +3,7 @@ import ImgScrollSwap from "../Effects/ImgScrollSwap"
 import ScrollVideo from "../Effects/ScrollVideo"
 import ZoomTransition from "../Effects/ZoomTransition"
 import ScrollText from "../Effects/ScrollText"
+import PlayAudio from "../Effects/PlayAudio"
 import DollarBill from "../../img/Trond/DollarBill_Trond.jpg"
 import Busk1 from "../../img/Trond/Busk1.png"
 import Busk2 from "../../img/Trond/Busk2.png"
@@ -106,6 +107,9 @@ export default function Trond() {
                     <p>-”Jeg husker godt det da jeg skulle prøve den hasjpipa for første gang. Jeg trodde jeg skulle dø, for mamma sa at hvis man brukte narkotika så kunne man dø” forteller han på en spøkefull måte.</p>
                 </article>
                 
+                <article>
+                    <PlayAudio />
+                </article>
             </section>
 
             <section>  
