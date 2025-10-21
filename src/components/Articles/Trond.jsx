@@ -3,7 +3,6 @@ import ImgScrollSwap from "../Effects/ImgScrollSwap"
 import ScrollVideo from "../Effects/ScrollVideo"
 import ZoomTransition from "../Effects/ZoomTransition"
 import ScrollText from "../Effects/ScrollText"
-import PlayAudio from "../Effects/PlayAudio"
 import DollarBill from "../../img/Trond/DollarBill_Trond.jpg"
 import Busk1 from "../../img/Trond/Busk1.png"
 import Busk2 from "../../img/Trond/Busk2.png"
@@ -12,6 +11,7 @@ import Lommelykt2 from "../../img/Trond/Lommelykt2.png"
 import Avis_animasjon from "../../img/Trond/Avis_animasjon_final.mp4"
 import Kirkens_bymisjon from "../../img/Trond/kirkens_bymisjon.jpg"
 import Trond_intervju from "../../img/Trond/Trond_intervju.jpg"
+import Trond1 from "../../audio/Trond/Trond1.MP3"
 import "../../styles/_trond.scss"
 
 
@@ -108,7 +108,9 @@ export default function Trond() {
                 </article>
                 
                 <article>
-                    <PlayAudio />
+                    <audio controls>
+                        <source src={Trond1} type="audio/mpeg" />
+                    </audio>
                 </article>
             </section>
 
