@@ -1,9 +1,11 @@
+//Effekter
 import HeroScroll from "../Effects/HeroScroll"
 import ImgScrollSwap from "../Effects/ImgScrollSwap"
 import ScrollVideo from "../Effects/ScrollVideo"
 import ZoomTransition from "../Effects/ZoomTransition"
 import ScrollText from "../Effects/ScrollText"
 import PopUp from "../Effects/PopUp"
+//Bilder
 import DollarBill from "../../img/Trond/DollarBill_Trond.jpg"
 import Busk1 from "../../img/Trond/Busk1.png"
 import Busk2 from "../../img/Trond/Busk2.png"
@@ -12,7 +14,10 @@ import Lommelykt2 from "../../img/Trond/Lommelykt2.png"
 import Avis_animasjon from "../../img/Trond/Avis_animasjon_final.mp4"
 import Kirkens_bymisjon from "../../img/Trond/kirkens_bymisjon.jpg"
 import Trond_intervju from "../../img/Trond/Trond_intervju.jpg"
+import Knutenrosen from "../../img/Trond/knutenrosen.jpg"
+//Audio
 import Trond1 from "../../audio/Trond/Trond1.MP3"
+//Styles
 import "../../styles/_trond.scss"
 
 
@@ -131,7 +136,17 @@ export default function Trond() {
                                 Knuterosen er en betennelse i underhuden som gir ømme, 
                                 røde knuter på leggene. Den skyldes en immunreaksjon, ofte etter infeksjon (vanligst streptokokker), 
                                 og går vanligvis over av seg selv i løpet av 4–6 uker.
-                                <a href="https://sml.snl.no/knuterosen">Les mer her</a>
+
+                                <figure className="popup-figure">
+                                    <img src={Knutenrosen} alt="Bilde av bein med sykdommen Knutenrosen." />
+                                    <figcaption>
+                                        Knuterosen <br />
+                                        DermNetNZ.org. <br />
+                                        Lisens: CC BY NC ND 3.0         
+                                    </figcaption>
+                                </figure>
+
+                                <a href="https://sml.snl.no/knuterosen"> Les mer her</a>
                             </>
                         } 
                     >
@@ -139,8 +154,6 @@ export default function Trond() {
                     </PopUp>{' '}
                     og ble en periode fraværende fra skolen.
                 </p>
-
-                <p>(Förklaring av sjukdomen)</p>
 
                 <p>
                     Tilbake etter sykdomsperioden ble Trond møtt med et nytt fag. 
