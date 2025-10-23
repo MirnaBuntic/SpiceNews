@@ -59,3 +59,9 @@
   z-index: 1;
   opacity: 0;
 }
+
+@media (min-width: 2000px) {
+  .zoom-image {
+    height: 150%;
+  }
+}
