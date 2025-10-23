@@ -24,6 +24,17 @@
     height: 85%;  
   }
 
+  .overlay-text-content {
+    position: absolute;
+    color: white;
+    z-index: 2;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    text-align: center;
+  }
+
   .text-content {
     position: absolute;
     z-index: 20;

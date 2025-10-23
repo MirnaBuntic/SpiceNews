@@ -33,6 +33,7 @@ export default function Trond() {
                 overlay1={Lommelykt1}
                 overlay2={Lommelykt2}
                 text="STOPP, POLITI!"
+                overlayText="Det rasler i buskene"
                 alt1="Busk nr 1"
                 alt2="Busk nr 2"
                 altOverlay1="Lommelykt av"
@@ -127,9 +128,10 @@ export default function Trond() {
             </section>
 
             <section className="school">
-                <p>
+                <div>
                     Barndommen utenfor husets fire vegger ble også tilbrakt på Ekeberg skole. 
                     Der trivdes Trond godt frem til han ble rammet av {' '}
+                    
                     <PopUp
                         info={
                             <>
@@ -153,7 +155,7 @@ export default function Trond() {
                         hudsykdommen Knuterosen
                     </PopUp>{' '}
                     og ble en periode fraværende fra skolen.
-                </p>
+                </div>
 
                 <p>
                     Tilbake etter sykdomsperioden ble Trond møtt med et nytt fag. 
