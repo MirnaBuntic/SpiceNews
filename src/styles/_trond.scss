@@ -180,6 +180,11 @@
         .story-intro {
             flex-direction: row-reverse;
             align-items: center;
+            margin-left: 0;
+
+            .flex-text {
+                width: 50%;
+            }
         }
 
         .question {
@@ -235,6 +240,62 @@
 
             p {
                 width: 50%;
+            }
+        }
+    }
+}
+
+@media (min-width: 2000px) {
+    .trond-article {
+        .img-scroll-flipbook {
+            .overlay-text-content {
+                font-size: 5rem;
+            }
+        }
+
+        .question {
+            padding-top: 25rem;
+            padding-bottom: 30rem;
+        }
+
+        .childhood, .school, .frank, .end-story {
+            font-size: 2rem;
+        }
+
+        .childhood, .frank, .end-story{
+            h4 {
+                font-size: 3rem;
+            }
+        }
+
+        .trond-audio {
+            margin-top: 12rem;
+            margin-bottom: 12rem;
+        }
+
+        .flex-dollar {
+            margin-top: 20rem;
+            margin-bottom: 20rem;
+
+            .dollarBill-section {
+                h3 {
+                    font-size: 3rem;
+                }
+
+                img {
+                    width: 600px;
+                }
+            }
+            p {
+                font-size: 2rem;
+            }
+        }
+
+        .slider-section {
+            height: 800px;
+
+            img {
+                max-height: 600px
             }
         }
     }

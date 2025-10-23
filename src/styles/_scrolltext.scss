@@ -34,12 +34,48 @@
 
 @media (min-width: 768px) {
   .scroll-text {
+    max-width: 1200px;
+
     .text-1{
       margin-right: 30rem;
     }
 
     .text-2{
       margin-left: 30rem;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .scroll-text {
+    max-width: 1200px;
+
+    .text-1{
+      margin-right: 50rem;
+    }
+
+    .text-2{
+      margin-left: 50rem;
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .scroll-text {
+    max-width: 2000px;
+
+    p {
+      font-size: 2rem;
+    }
+
+    .text-1{
+      margin-right: 80rem;
+    }
+
+    .text-2{
+      margin-left: 80rem;
+      text-align: right;
     }
   }
 }
