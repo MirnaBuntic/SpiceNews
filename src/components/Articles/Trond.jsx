@@ -5,6 +5,7 @@ import ScrollVideo from "../Effects/ScrollVideo"
 import ZoomTransition from "../Effects/ZoomTransition"
 import ScrollText from "../Effects/ScrollText"
 import PopUp from "../Effects/PopUp"
+import Slider from "../Effects/Slider"
 //Bilder
 import DollarBill from "../../img/Trond/DollarBill_Trond.jpg"
 import Busk1 from "../../img/Trond/Busk1.png"
@@ -15,6 +16,9 @@ import Avis_animasjon from "../../img/Trond/Avis_animasjon_final.mp4"
 import Kirkens_bymisjon from "../../img/Trond/kirkens_bymisjon.jpg"
 import Trond_intervju from "../../img/Trond/Trond_intervju.jpg"
 import Knutenrosen from "../../img/Trond/knutenrosen.jpg"
+import TrondKompis from "../../img/Trond/Trond_med_kompis.jpg"
+import TrondFengsel from "../../img/Trond/Trond_fengsel.jpg"
+import TrondUng from "../../img/Trond/Trond_ung.jpg"
 //Audio
 import Trond1 from "../../audio/Trond/Trond1.MP3"
 //Styles
@@ -24,6 +28,13 @@ import "../../styles/_trond.scss"
 
 export default function Trond() {
     const transitionDuration = 3;
+
+    const sliderImages = [
+        { src: TrondKompis, alt: "Trond med kompis", caption: "Trond med kompis." },
+        { src: TrondFengsel, alt: "Trond påvei ut av fengsel", caption: "Trond påvei ut av fengsel." },
+        { src: TrondUng, alt: "Trond som ung.", caption: "Trond som ung." }
+    ]
+
     return (
         <section className="trond-article">
 
@@ -193,6 +204,10 @@ export default function Trond() {
                     Han likte rusen, men det var ikke det som var viktigst. 
                     Det var å imponere Frank. Det var det viktigste.
                 </p>
+            </section>
+
+            <section className="slider-section">
+                <Slider images={sliderImages}/>
             </section>
 
             <section>  

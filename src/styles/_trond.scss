@@ -90,6 +90,54 @@
         }
     }
   
+    .slider-section {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        height: 400px;
+        margin: 0 auto; 
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        img {
+            max-height: 350px;
+            width: 260px;  
+            display: flex
+        }
+
+        .slider-caption {
+            margin-top: 10px; 
+            color: black;
+            font-size: 1rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            padding: 0 12px;
+            cursor: pointer;
+            user-select: none;
+            z-index: 10;
+
+            &.prev {
+            left: 10px;
+            }
+
+            &.next {
+            right: 10px;
+            }
+        }
+    }
 
     .dollarBill-section {
         text-align: center;
