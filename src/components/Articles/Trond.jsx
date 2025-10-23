@@ -3,6 +3,7 @@ import ImgScrollSwap from "../Effects/ImgScrollSwap"
 import ScrollVideo from "../Effects/ScrollVideo"
 import ZoomTransition from "../Effects/ZoomTransition"
 import ScrollText from "../Effects/ScrollText"
+import PopUp from "../Effects/PopUp"
 import DollarBill from "../../img/Trond/DollarBill_Trond.jpg"
 import Busk1 from "../../img/Trond/Busk1.png"
 import Busk2 from "../../img/Trond/Busk2.png"
@@ -71,26 +72,25 @@ export default function Trond() {
                     
                 <ScrollText transitionDuration={transitionDuration}>
                     <p className="text">
-                    På trappene utenfor Halden Togstasjon møter vi Trond Henriksen, mange
-                    husker han som “Norges farligste mann” og en beryktet person innen
-                    det kriminelle miljøet på 90/tidlig 2000-tallet.
-                    
-                    Trond møter oss med et vennlig smil og et solid håndtrykk. Han har
-                    siden 2011 jobbet for Kirkens bymisjon, og viser oss stolt rundt i
-                    togstasjonens lokaler som i dag fungerer som café. Over gaten ligger
-                    det gamle godshuset som ble bygd i 1879, dette er i dag restaurert
-                    og driftes av bymisjonen som kurs- og konferansesenter og er en
-                    av Trond sine mange hjertesaker for byen.
+                        På trappene utenfor Halden Togstasjon møter vi Trond Henriksen, 
+                        mange husker han som “Norges farligste mann” og en beryktet person 
+                        innen det kriminelle miljøet på 90/tidlig 2000-tallet.
+                        Trond møter oss med et vennlig smil og et solid håndtrykk. 
+                        Han har siden 2011 jobbet for Kirkens bymisjon, 
+                        og viser oss stolt rundt i togstasjonens lokaler som i dag fungerer som café. 
+                        Over gaten ligger det gamle godshuset som ble bygd i 1879. 
+                        Bygget er i dag restaurert og driftes av bymisjonen som kurs- og konferansesenter, 
+                        og er en av Trond sine mange hjertesaker for byen.
                     </p>
 
-                    <p className="text-1">“Har dere spist?” - spør han oss</p>
+                    <p className="text-1">“Har dere spist?” - spør han oss.</p>
 
-                    <p className="text-2">“Nei, i grunn ikke” - svarer vi i kor</p>
+                    <p className="text-2">“Nei, i grunn ikke” - svarer vi i kor.</p>
 
                     <p className="text-3">
-                    Han viser oss inn på kjøkkenet og en kollega av Trond serverer oss
-                    dagens suppe som vi balanserer over gaten og inn i det gamle
-                    godshuset. Her setter vi oss ned for en prat med Trond. Dette er hans historie.
+                        Han viser oss inn på kjøkkenet og en kollega av Trond serverer oss dagens suppe 
+                        som vi balanserer over gaten og inn i det gamle godshuset. 
+                        Her setter vi oss ned for en prat med Trond. Her er hans historie.
                     </p>
 
                 </ScrollText>
@@ -100,13 +100,18 @@ export default function Trond() {
                 <article className="childhood">
                     <h4>”Jeg pleier å si at jeg er født i Vålerengatunnelen"</h4>
 
-                    <p>Trond er nå bosatt i Halden og nærmer seg 60 år, men kommer opprinnelig fra østkanten, nærmere bestemt Vålerenga i Oslo. </p>
+                    <p>Trond er nå bosatt i Halden og nærmer seg 60 år, men kommer opprinnelig fra østkanten, nærmere bestemt Vålerenga i Oslo.</p>
 
-                    <p>-”Jeg pleier å si at jeg er født i Vålerengatunnelen", forteller Trond. Der vokste han opp i enkle kår sammen med sin mor og to søsken.</p>
+                    <p>-"Jeg pleier å si at jeg er født i Vålerengatunnelen", forteller Trond. Der vokste han opp i enkle kår sammen med sin mor og to søsken.</p>
 
-                    <p>Barndommen ble beskrevet som fin, men at den også bar preg av utfordringer. Oppveksten var preget av mye rus og utrygghet. Moren omgikk seg stadig med menn som slet med rus, til tross for at hun selv var avholds. Dette gjorde at barna tidlig ble eksponert for rus. </p>
+                    <p>
+                        Barndommen ble beskrevet som fin, men at den også bar preg av utfordringer. 
+                        Oppveksten var preget av mye rus og utrygghet. 
+                        Moren omgikk seg stadig med menn som slet med rus, til tross for at hun selv var avholds. 
+                        Dette gjorde at barna tidlig ble eksponert for rus.
+                    </p>
 
-                    <p>-”Jeg husker godt det da jeg skulle prøve den hasjpipa for første gang. Jeg trodde jeg skulle dø, for mamma sa at hvis man brukte narkotika så kunne man dø” forteller han på en spøkefull måte.</p>
+                    <p>-"Jeg husker godt første gangen, for da var jeg sikker på at jeg skulle dø, for det hadde mamma sagt at narkotika er farlig og jeg kan dø",  forteller han på en spøkefull måte.</p>
                 </article>
                 
                 <article className="trond-audio">
@@ -117,27 +122,62 @@ export default function Trond() {
             </section>
 
             <section className="school">
-                <h4></h4>
-
-                <p>Barndommen utenfor husets fire vegger ble også tilbrakt på Ekeberg skole. Der trivdes Trond godt frem til han ble rammet av hudsykdommen Knuterosen og ble en periode fraværende fra skolen.</p>
+                <p>
+                    Barndommen utenfor husets fire vegger ble også tilbrakt på Ekeberg skole. 
+                    Der trivdes Trond godt frem til han ble rammet av {' '}
+                    <PopUp
+                        info={
+                            <>
+                                Knuterosen er en betennelse i underhuden som gir ømme, 
+                                røde knuter på leggene. Den skyldes en immunreaksjon, ofte etter infeksjon (vanligst streptokokker), 
+                                og går vanligvis over av seg selv i løpet av 4–6 uker.
+                                <a href="https://sml.snl.no/knuterosen">Les mer her</a>
+                            </>
+                        } 
+                    >
+                        hudsykdommen Knuterosen
+                    </PopUp>{' '}
+                    og ble en periode fraværende fra skolen.
+                </p>
 
                 <p>(Förklaring av sjukdomen)</p>
 
-                <p>Tilbake etter sykdomsperioden ble Trond møtt med et nytt fag. Engelsk, noe Trond fort forstod at han ikke mestret. Følelsen av å ikke mestre engelsken førte til at han valgte å droppe ut av faget, som senere ble til å skulke hele skoledagen.</p>
+                <p>
+                    Tilbake etter sykdomsperioden ble Trond møtt med et nytt fag. 
+                    Engelsk, noe Trond fort forstod at han ikke mestret. 
+                    Følelsen av å ikke mestre engelsken førte til at han valgte å droppe ut av faget, som senere ble til å skulke hele skoledagen.
+                </p>
             </section>
 
             <section className="frank">
                 <h4>De første skrittene inn i rusmiljøet</h4>
 
-                <p>Han kunne ikke dra hjem, så tidsfordrivet ble å reise til byen, mer spesifikt trappene ved Østbanehallen i hjertet av Oslo. Der traff han andre ungdommer som delte de samme utfordringene. Spesielt en gutt skilte seg ut for Trond, nemlig 19 år gamle Frank.</p>
+                <p>
+                    Han kunne ikke dra hjem, så tidsfordrivet ble å reise til byen, 
+                    mer spesifikt trappene ved Østbanehallen i hjertet av Oslo. 
+                    Der traff han andre ungdommer som delte de samme utfordringene. 
+                    Spesielt en gutt skilte seg ut for Trond, nemlig 19 år gamle Frank.
+                </p>
 
-                <p>Med skinnjakke, det faktumet at han var noen år eldre og hadde draget på damene, gjorde at Frank ble en person de aller fleste i gjengen så opp til. </p>
+                <p>
+                    Med skinnjakke, det faktumet at han var noen år eldre og hadde draget på damene, 
+                    gjorde at Frank ble en person de aller fleste i gjengen så opp til.
+                </p>
 
                 <p>(skinnjacka)</p>
                     
-                <p>Som 12-åring prøvde Trond for første gang narkotiske stoffer. Dette var utelukkende for å imponere Frank. Før dette hadde synet på narkotika og rus aldri vært tiltalende. Det hadde vært noe som har vært skummelt og som ifølge Tronds mor potensielt kunne føre til død.</p>
+                <p>
+                    Som 12-åring prøvde Trond for første gang narkotiske stoffer. 
+                    Dette var utelukkende for å imponere Frank. 
+                    Før dette hadde synet på narkotika og rus aldri vært tiltalende. 
+                    Det hadde vært noe som har vært skummelt og som ifølge Tronds mor potensielt kunne føre til død.
+                </p>
 
-                <p>Til tross for dette prøvde Trond hasjpipe og fikk et voldsomt hosteanfall. Han likte rusen, men det var ikke det som var viktigst. Det var å imponere Frank. Det var det viktigste.</p>
+                <p>
+                    Til tross for dette prøvde Trond hasjpipe og fikk et voldsomt hosteanfall. 
+                    Han likte rusen, men det var ikke det som var viktigst. 
+                    Det var å imponere Frank. Det var det viktigste.
+                </p>
             </section>
 
             <section>  
