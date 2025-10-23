@@ -33,7 +33,7 @@ export default function Trond() {
                 overlay1={Lommelykt1}
                 overlay2={Lommelykt2}
                 text="STOPP, POLITI!"
-                overlayText="Det rasler i buskene"
+                overlayText="*Det rasler i buskene*"
                 alt1="Busk nr 1"
                 alt2="Busk nr 2"
                 altOverlay1="Lommelykt av"

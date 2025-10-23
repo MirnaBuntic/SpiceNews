@@ -58,10 +58,9 @@ export default function ImgScrollSwap({
 
         tl.to(overlayTextRef.current, {
           autoAlpha: 1,
-          duration: 0.3,
+          duration: 6,
           onStart: () => {
               overlayTextRef.current.innerText = overlayText || "";
-              console.log("OverlayText set to:", overlayText);
           }
         });
 
