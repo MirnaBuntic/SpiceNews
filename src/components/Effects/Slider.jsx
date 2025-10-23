@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react"
 import { gsap } from "gsap";
 
 export default function Slider ({ images }) {
-        const [current, setCurrent] = useState(0);
+    const [current, setCurrent] = useState(0);
     const [direction, setDirection] = useState(1);
     const imgRef = useRef(null);
     const touchStart = useRef(null);
@@ -56,6 +56,7 @@ export default function Slider ({ images }) {
         </button>
 
         <img
+            ref={imgRef}
             src={images[current].src}
             alt={images[current].alt}
             className="slider-image"
