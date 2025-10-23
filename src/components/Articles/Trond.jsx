@@ -163,7 +163,7 @@ export default function Trond() {
                             </>
                         } 
                     >
-                        hudsykdommen Knuterosen
+                        <strong>hudsykdommen Knuterosen</strong>
                     </PopUp>{' '}
                     og ble en periode fraværende fra skolen.
                 </div>

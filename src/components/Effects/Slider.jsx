@@ -1,42 +1,45 @@
-import { useState, useRef } from "react"
+import { useState, useEffect, useRef } from "react"
+import { gsap } from "gsap";
 
 export default function Slider ({ images }) {
-    const [current, setCurrent] = useState(0);
+        const [current, setCurrent] = useState(0);
+    const [direction, setDirection] = useState(1);
+    const imgRef = useRef(null);
     const touchStart = useRef(null);
     const touchEnd = useRef(null);
 
     const nextSlide = () => {
-        setCurrent((current + 1) % images.length);
+        setDirection(1);
+        setCurrent((prev) => (prev + 1) % images.length);
     };
 
     const prevSlide = () => {
-        setCurrent((current - 1 + images.length) % images.length);
+        setDirection(-1);
+        setCurrent((prev) => (prev - 1 + images.length) % images.length);
     };
 
-    const onTouchStart = (e) => {
-        touchStart.current = e.changedTouches[0].screenX;
-    };
-
+    const onTouchStart = (e) => (touchStart.current = e.touches[0].clientX);
     const onTouchEnd = (e) => {
-        touchEnd.current = e.changedTouches[0].screenX;
+        touchEnd.current = e.changedTouches[0].clientX;
         handleSwipe();
     };
 
-    
     const handleSwipe = () => {
-        if (!touchStart.current || !touchEnd.current) return;
         const distance = touchStart.current - touchEnd.current;
         const minSwipeDistance = 50;
-
-        if (distance > minSwipeDistance) {
-        nextSlide();
-        } else if (distance < -minSwipeDistance) {
-        prevSlide();
-        }
-
-        touchStart.current = null;
-        touchEnd.current = null;
+        if (distance > minSwipeDistance) nextSlide();
+        else if (distance < -minSwipeDistance) prevSlide();
     };
+
+    useEffect(() => {
+        const img = imgRef.current;
+
+        gsap.fromTo(
+            img,
+            { x: direction * 100, autoAlpha: 0 },
+            { x: 0, autoAlpha: 1, duration: 0.6, ease: "power2.out" }
+        );
+    }, [current]);
 
     return (
     <article
