@@ -8,10 +8,17 @@
   overflow: hidden;
   background: black;
   padding-bottom: 5rem;
+  padding-top: 5rem;
 }
 
 .scroll-video {
   width: 95%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .scroll-video-container {
+    margin-left: 2rem;
+  }
 }

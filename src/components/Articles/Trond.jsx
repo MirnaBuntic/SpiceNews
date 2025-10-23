@@ -57,18 +57,20 @@ export default function Trond() {
             />
 
             <article className="story-intro">
-                <p>Lommelykten lyser i ansiktet på de to fengselsrømmlingene.</p>
+                <div className="flex-text">
+                    <p>Lommelykten lyser i ansiktet på de to fengselsrømmlingene.</p>
 
-                <p>Med bagger fulle av smuglet narkotika befinner Trond og Morten seg nå i et dilemma.</p>
+                    <p>Med bagger fulle av smuglet narkotika befinner Trond og Morten seg nå i et dilemma.</p>
 
-                <p>Overgi seg eller fortsette på rømmen med 2 menn som gisler, der en av mennene er politi?</p>
+                    <p>Overgi seg eller fortsette på rømmen med 2 menn som gisler, der en av mennene er politi?</p>
+                </div>
+
+                <ScrollVideo 
+                    src={Avis_animasjon}
+                    className="my-scroll-video"
+                    playbackRate={0.8}
+                />
             </article>
-
-            <ScrollVideo 
-                src={Avis_animasjon}
-                className="my-scroll-video"
-                playbackRate={0.8}
-            />
 
             <article className="question">
                 <h2>Men hvordan havnet de her?</h2>
@@ -210,15 +212,13 @@ export default function Trond() {
                 <Slider images={sliderImages}/>
             </section>
 
-            <section>  
+            <section className="flex-dollar">  
                 <article className="dollarBill-section">
                     <h3>"100kr"</h3>
                     <img src={DollarBill} alt="Trond på en hundralapp" />
                 </article>
     
-                <article className="text-container">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                </article>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
             </section>
 
             <section className="end-story">

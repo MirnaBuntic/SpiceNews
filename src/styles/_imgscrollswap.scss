@@ -39,13 +39,11 @@
   .text-content {
     position: absolute;
     z-index: 20;
-    bottom: 14.7rem;
-    right: 0;
+    position: absolute;
+    top: 72%;
+    left: 65%;
+    transform: rotate(-30deg);
     color: black;
-    font-size: 1.4rem;
-    opacity: 0;
-    transform: rotate(-30deg); 
-    transform-origin: bottom right;
     text-shadow:
     3px 3px 6px rgba(0, 0, 0, 0.8),  
     6px 6px 12px rgba(0, 0, 0, 0.6),  
@@ -70,3 +68,66 @@
     );
   }
 }
+
+@media (min-width: 525px) {
+    .img-scroll-flipbook {
+      .overlay-image {
+        width: 87%;
+      }
+
+      .text-content {
+        left: 56%;
+      }
+  }
+}
+
+@media (min-width: 600px) {
+  .img-scroll-flipbook {
+    .overlay-image {
+      width: 78%;
+    }
+
+    .text-content {
+      left: 49%;
+    }
+  }
+}
+
+@media (min-width: 670px) {
+  .img-scroll-flipbook {
+    img {
+      object-fit: fill;
+    }
+
+    .overlay-image {
+      width: 70%;
+    }
+
+    .text-content {
+      left: 45%;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .img-scroll-flipbook {
+    
+    .overlay-image {
+      width: 70%;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+    .img-scroll-flipbook {
+    
+    .overlay-image {
+      width: 50%;
+    }
+
+    .text-content {
+      left: 32%;
+    }
+  }
+}
+

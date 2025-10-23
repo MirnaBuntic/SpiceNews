@@ -5,7 +5,7 @@
 
     .story-intro {
         padding-top: 15rem;
-        padding-bottom: 10rem;
+        padding-bottom: 0;
         display: flex;
         flex-direction: column;
         background-color: black;
@@ -15,6 +15,11 @@
             text-align: center;
             font-size: x-large;
             color: white;
+        }
+
+        .flex-text{
+            display: flex;
+            flex-direction: column;
         }
     }
 
@@ -92,8 +97,7 @@
   
     .slider-section {
         position: relative;
-        width: 100%;
-        max-width: 600px;
+        min-width: 100%;
         height: 400px;
         margin: 0 auto; 
         overflow: hidden;
@@ -141,31 +145,93 @@
         }
     }
 
-    .dollarBill-section {
-        text-align: center;
-        padding: 0 0 4rem 0;
-        margin-top: 5rem;
+    .flex-dollar {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5rem;
 
-        h3 {
-            font-size: 1.5rem;
-            color: black;
+        .dollarBill-section {
+            text-align: center;
+            padding: 0 0 4rem 0;
+            margin-top: 5rem;
+
+            h3 {
+                font-size: 1.5rem;
+                color: black;
+            }
+
+            img {
+                width: 300px;
+                max-width: 90%;
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+            }
         }
-
-        img {
-            width: 300px;
-            max-width: 90%;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-        }
-    }
-
-
-    .text-container {
-        margin: 0 0 4rem 0;
 
         p {
             margin: 0 3rem 0 3rem;
             color: black;
             font-size: 1.2rem;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .trond-article {
+        .story-intro {
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        .question {
+            padding-top: 10rem;
+        }
+
+        .childhood {
+            margin: 10rem 10rem 4rem 10rem;
+        }
+
+        .trond-audio {
+            audio {
+                width: 400px;
+            }
+        }
+
+        .school, .frank, .end-story {
+            margin-left: 10rem;
+            margin-right: 10rem;
+        }
+
+        .slider-section {
+            .slider-button {
+                &.prev {
+                    left: 40px;
+                }
+
+                &.next {
+                    right: 40px;
+                }
+            }
+        }
+
+        .flex-dollar {
+            flex-direction: row;
+            margin-top: 10rem;
+            margin-bottom: 10rem;
+            align-items: center;
+
+            .dollarBill-section {
+                min-width: 50%;
+                margin-top: 0;
+                padding: 0;
+
+                h3 {
+                    margin-top: 0;
+                }
+            }
+
+            p {
+                width: 50%;
+            }
         }
     }
 }
