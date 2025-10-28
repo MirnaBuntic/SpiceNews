@@ -6,6 +6,7 @@ import ZoomTransition from "../Effects/ZoomTransition"
 import ScrollText from "../Effects/ScrollText"
 import PopUp from "../Effects/PopUp"
 import Slider from "../Effects/Slider"
+import ImgEffect from "../Effects/ImgEffect"
 //Bilder
 import DollarBill from "../../img/Trond/DollarBill_Trond.jpg"
 import Busk1 from "../../img/Trond/Busk1.png"
@@ -19,11 +20,11 @@ import Knutenrosen from "../../img/Trond/knutenrosen.jpg"
 import TrondKompis from "../../img/Trond/Trond_med_kompis.jpg"
 import TrondFengsel from "../../img/Trond/Trond_fengsel.jpg"
 import TrondUng from "../../img/Trond/Trond_ung.jpg"
+import Skinnjakke from "../../img/Trond/SkinnjakkeTrond.png"
 //Audio
 import Trond1 from "../../audio/Trond/Trond1.MP3"
 //Styles
 import "../../styles/_trond.scss"
-
 
 
 export default function Trond() {
@@ -192,7 +193,12 @@ export default function Trond() {
                     gjorde at Frank ble en person de aller fleste i gjengen så opp til.
                 </p>
 
-                <p>(skinnjacka)</p>
+                <ImgEffect
+                    src={Skinnjakke}
+                    alt="Frank sin skinnjakke"
+                    containerClassName="reveal-wrap"
+                    imgClassName="reveal-img"
+                />
                     
                 <p>
                     Som 12-åring prøvde Trond for første gang narkotiske stoffer. 
