@@ -21,6 +21,7 @@ import TrondKompis from "../../img/Trond/Trond_med_kompis.jpg"
 import TrondFengsel from "../../img/Trond/Trond_fengsel.jpg"
 import TrondUng from "../../img/Trond/Trond_ung.jpg"
 import Skinnjakke from "../../img/Trond/SkinnjakkeTrond.png"
+import TrondSmiler from "../../img/Trond/Trond-smiler.jpg"
 //Audio
 import Trond1 from "../../audio/Trond/Trond1.MP3"
 //Styles
@@ -89,7 +90,6 @@ export default function Trond() {
                 />
 
             
-                    
                 <ScrollText transitionDuration={transitionDuration}>
                     <p className="text">
                         På trappene utenfor Halden Togstasjon møter vi Trond Henriksen, 
@@ -218,10 +218,57 @@ export default function Trond() {
                 <Slider images={sliderImages}/>
             </section>
 
-            <section>
+            <section className="dark-thoughts">
                 <h4>De mørke tankene</h4>
 
-                <p></p>
+                <p>
+                    Trond var stort sett glad i livet, men det har tidvis vært så heftig at tanken om å avslutte livet ikke var fremmed.
+                    Alle årene med rus og kriminalitet hadde begynt å tære på kroppen. Tanken om å avslutte livet dukket opp, som den også hadde gjort flere ganger før.
+                </p>
+
+                <p>
+                    En spesielt mørk tid for Trond var da han i 2010 befant seg i Sverige.
+                    Der var han i påvente av en dom på 16 måneder i Halden fengsel, etter å ha blitt tatt med 130kg smuglet khat.
+                    En ekstra stor dose med heroin ble satt i håp om at det skulle bli slutten på alt. Slik ble det ikke.
+                </p>
+
+                <p>
+                    Valget om å avslutte sitt eget liv kan for utenforstående virke egoistisk, men Trond mener det motsatte.
+                    - Det er egentlig ganske stort mot det å avslutte sitt eget liv, så jeg har fått et annet syn på det, absolutt, og når du kommer dit, da kommer du jo ikke lenger ned i kjelleren, forteller en ærlig Trond.
+                </p>
+            </section>
+
+            <section className="crime">
+                <h4>Kriminalitet - den beste rusen</h4>
+
+                <p>Rus og kriminalitet henger ofte sammen, og for Trond så var det ikke rusen som var det viktigste, det var aksepten fra Frank.
+                    Det gjeveste man kunne gjøre var en biljakt med politiet hakk i hæl, Frank ved sin side og et påfyll av endorfiner som kunne sammenlignes med den beste rusen du kan tenke deg.
+                    Dette utviklet seg til stadig mer detaljert vinningskriminalitet som til slutt eskalerte til kidnapping av en offentlig tjenestemann.
+                </p>
+            </section>
+
+            <section className="riksalarm">
+                <h4>Veisperringer og riksalarm</h4>
+
+                <p>
+                    Trond og Morten hadde vært på en 100 dagers flukt, etter å ha rømt fra Ullersmo fengsel.
+                    I en tåke av høy amfetaminrus befant de seg på kaia i Horten. Der ventet en båt de skulle fortsette flukten med.
+                    I baklommen hadde Trond 1 kg hasj og en gammel pistol, uvitende om at politiet vaket i et par busker rett ved.
+                    Da politiet hoppet frem fra buskene med en stor lommelykt, trodde både Trond og Morten at de var på vei til å bli ranet.
+                    Det ble derfor et basketak, som endte med at politimannen ble lagt i bakken. Først da innser rømlingene at mannen fra buskene er politi ettersom mannen skriker “ JEG ER POLITI, JEG ER POLITI”.
+                </p>
+
+                <p>
+                    - Da skjønte vi allerede at fy faen nå har vi “driti på draget”, forteller Trond.
+                    I full hast kidnappet de både politimannen og en båtvakt, tok gislene med seg i politibilen, og fortsatte flukten langt opp på fjellet mot Vittingfoss.
+                    Trond minnes hele flukten som forferdelig og med høy desperasjon etter “hva gjør vi nå?”. 
+                </p>
+
+                <p>
+                    Omgitt av fjellandskap resonerte rømlingene frem og tilbake på hva de skulle gjøre med gislene.
+                    Å binde dem fast til et tre var uaktuelt, for da ville de mest sannsynlig dø.
+                    De konkluderte derfor med at det smarteste var å lenke gislene sammen med håndjern, lempe de ut av politibilen på en strekning, hvor nærmeste hjelp er minimum en times gangavstand.
+                </p>
             </section>
 
             <section className="flex-dollar">  
@@ -230,21 +277,80 @@ export default function Trond() {
                     <img src={DollarBill} alt="Trond på en hundralapp" />
                 </article>
     
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <p>- Jeg ga dem til og med 100 kr til taxi, så på jordet var jeg altså, det var så sjukt, humrer Trond.</p>
+            </section>
+
+            <section className="riksalarm">
+                <p>
+                    Flukten tok dem så videre til en hytte hvor de søkte ly fra politiet, media og samfunnets søkelys.
+                    Der knebles etterhvert hytteieren, da han tilfeldigvis skulle innom hytta, vel uviten om at der befant to av Norges farligste menn seg.
+                </p>
+
+                <p>
+                    På dette tidspunktet foregikk søk etter Trond og Morten med helikopter, de var på førstesiden i VG og i innslag på Dagsrevyen.
+                    Det viste seg at hytteeieren var en lokal bonde, som skulle få hjelp av sin datter til å stelle i stand hytta, litt senere samme kveld.
+                    Det bonden unnlatte å fortelle var at datteren ikke skulle komme senere samme kveld. Hun skulle komme allerede etter 20 minutter. Dermed ble Trond og Morten igjen oppdaget.
+                </p>
+
+                <p>
+                    Med de to gisselsituasjonene som bakgrunn, ble det slått full riksalarm, som førte til veisperringer over hele landet.
+                    Døgnet på flukt endte på brutalt vis med veisperring i begge kanter og bevæpnet politi.
+                    - Det var veldig nervøse politifolk, som i ettertid sa at det var bare så mye om at de begynte å skyte, sier Trond.
+                </p>
+
+                <p>
+                    Noen år senere rømte Morten fra Ila fengsel, ved å utebli fra permisjon.
+                    Han søkte tilflukt i kjærestens leilighet, hvor politiet etterhvert tar seg inn. Her ender Mortens historie.
+                    Der ble skutt i halsen med barnet sitt på armen. - Og det var nok veldig på grunn av at vi var stemplet som “Norges farligste”, forteller Trond.
+                </p>
+            </section>
+
+            <section className="responsibility">
+                <h4>Tar du ansvar for handlingene dine? Eller mener du at det er problemer i livet ditt som ikke har blitt fanget opp i tidligere fase?, spør studentene.</h4>
+
+                <p>
+                    - I ungdomsårene så var nok tanken at samfunnet hadde skylden, sier han. I voksen alder ser han annerledes på saken.
+                    Han mener at alle årene i fengselet var vel fortjent og det er rett og rimelig at man skal ta ansvar for handlingene sine.
+                    Trond reflekterer lett rundt hvorvidt disse problemene kunne blitt oppdaget tidligere i livet, og tenker på hvordan livet kunne vært annerledes dersom moren og skolen hadde kommunisert bedre.
+                </p>
+
+                <p>
+                    Det blir lett å tenke at skulkingen mest sannsynlig ikke hadde forekommet, og Trond hadde kanskje aldri truffet menneskene på Østbanetrappene.
+                    - Dette er ikke noe jeg har valgt, det er slik situasjonen ble, konkluderer Trond.
+                </p>
+            </section>
+
+            <section className="responsibility">
+                <h4>I følge tall fra nettavisen koster det staten rundt 1 million kroner å oppbevare kriminelle i fengsel. Enig, eller ikke enig?, spør studentene. </h4>
+
+                <p>
+                    - Jeg har kostet samfunnet over 100 millioner kroner, og det er 1990 beløp, så i dag vil det være 150 millioner tenker jeg.
+                    Og dette har blitt regnet på sammen med folk i fengselet faktisk, og da har man ikke tatt med for eksempel at folk har blitt sykemeldte på grunn av mine handlinger, men sånne reelle kostander.
+                    Så det koster forferdelig mye, særlig en sånn aktiv kriminell som jeg var, så koster det samfunnet veldig mye penger, sier Trond.
+                </p>
             </section>
 
             <section className="end-story">
                 <h4>Vendepunktet</h4>
 
-                <p>Å ville klare alt selv var en dominerende tanke og det var først godt inn i 20-årene at det å oppsøke hjelp for rusmisbruket streifet Tronds hode. Det uskyldige forsøket på å imponere Frank hadde da utviklet seg til å bli et fullverdig heroinmisbruk. -"Når man først har kommet dit, så blir veien komplisert".</p>
+                <p>Å ville klare alt selv var en dominerende tanke og det var først godt inn i 20-årene at det å oppsøke hjelp for rusmisbruket streifet Tronds hode.
+                    Det uskyldige forsøket på å imponere Frank hadde da utviklet seg til å bli et fullverdig heroinmisbruk.
+                    -"Når man først har kommet dit, så blir veien komplisert".
+                </p>
 
-                <p>Etter 13 år med svingdør inn og ut av fengsel (første gang som 14-åring), sonet han sent i 20-årene ved Ullersmo fengsel. Der spurte Trond om hjelp for første gang. Resultatet ble en henvisning med plass på Tyrili behandlingsinstitusjon, hvor han tilbrakte flere år.</p>
+                <p>Etter 13 år med svingdør inn og ut av fengsel (første gang som 14-åring), sonet han sent i 20-årene ved Ullersmo fengsel. Der spurte Trond om hjelp for første gang.
+                    Resultatet ble en henvisning med plass på Tyrili behandlingsinstitusjon, hvor han tilbrakte flere år.
+                </p>
 
-                <p>Veien ut av rusen var en krevende, lang og vanskelig vei. Det viste seg at én er ikke ferdig rehabilitert etter 3-4 måneder, som Trond først tenkte. Avhengigheten er noe du bærer med deg i lang tid, om ikke livet ut.</p>
+                <p>Veien ut av rusen var en krevende, lang og vanskelig vei. Det viste seg at én er ikke ferdig rehabilitert etter 3-4 måneder, som Trond først tenkte.
+                    Avhengigheten er noe du bærer med deg i lang tid, om ikke livet ut.
+                </p>
 
-                <p>(video som smiler)</p>
+                <img src={TrondSmiler} />
 
-                <p>En tankefull Trond trekker på smilebåndene og sier -”Nå skal jeg, om bare en drøy måned, feire at det er 15 år siden sist jeg satt meg en sprøyte heroin, det gleder jeg meg til!"</p>
+                <p>
+                    En tankefull Trond trekker på smilebåndene og sier -”Nå skal jeg, om bare en drøy måned, feire at det er 15 år siden sist jeg satt meg en sprøyte heroin, det gleder jeg meg til!"
+                </p>
             </section>
 
         </section>
