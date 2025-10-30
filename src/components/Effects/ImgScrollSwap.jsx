@@ -10,12 +10,13 @@ export default function ImgScrollSwap({
     image2,
     overlay1,
     overlay2,
-    text,
+    overImage,
     overlayText,
     alt1,
     alt2,
     altOverlay1,
     altOverlay2,
+    altOverImage,
     flipCount = 10,
     flipSpeed = 0.1,
     delayScroll = 0.2,
@@ -27,65 +28,72 @@ export default function ImgScrollSwap({
     const img2Ref = useRef(null);
     const overlay1Ref = useRef(null);
     const overlay2Ref = useRef(null);
-    const textRef = useRef(null);
     const overlayTextRef = useRef(null);
+    const overImageRef = useRef(null)
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
         
-        gsap.set(img1Ref.current, { zIndex: 1 });
-        gsap.set(img2Ref.current, { zIndex: 0 });
-        gsap.set(overlay1Ref.current, { autoAlpha: 0 });
-        gsap.set(overlay2Ref.current, { autoAlpha: 0 });
-        gsap.set(textRef.current, { autoAlpha: 0, innerText: "" });
-        gsap.set(overlayTextRef.current, { autoAlpha: 0, innerText: "" });
+      gsap.set(img1Ref.current, { zIndex: 1 });
+      gsap.set(img2Ref.current, { zIndex: 0 });
+      gsap.set(overlay1Ref.current, { autoAlpha: 0 });
+      gsap.set(overlay2Ref.current, { autoAlpha: 0 });
+      gsap.set(overImageRef.current, { autoAlpha: 0, innerText: "" });
+      gsap.set(overlayTextRef.current, { autoAlpha: 0, innerText: "" });
 
 
-        const tl = gsap.timeline({
+      const tl = gsap.timeline({
         scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top top",
-            end: "bottom top",
-            scrub: true,
-            pin: true,
-            pinSpacing: true,
-            anticipatePin: 1,
-            invalidateOnRefresh: true,
-           },
-        });
+          trigger: containerRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+          pin: true,
+          pinSpacing: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
+      });
 
-        tl.to({}, { duration: delayScroll });
+      tl.to({}, { duration: delayScroll });
 
-        tl.to(overlayTextRef.current, {
-          autoAlpha: 1,
-          duration: 6,
-          onStart: () => {
-              overlayTextRef.current.innerText = overlayText || "";
-          }
-        });
-
-        for (let i = 0; i < flipCount; i++) {
-          tl.set(img1Ref.current, { zIndex: 1 });
-          tl.set(img2Ref.current, { zIndex: 0 });
-          tl.to({}, { duration: flipSpeed });
-
-          tl.set(img1Ref.current, { zIndex: 0 });
-          tl.set(img2Ref.current, { zIndex: 1 });
-          tl.to({}, { duration: flipSpeed });
+      tl.to(overlayTextRef.current, {
+        autoAlpha: 1,
+        duration: 6,
+        onStart: () => {
+          overlayTextRef.current.innerText = overlayText || "";
         }
+      });
 
-        tl.to(overlayTextRef.current, { autoAlpha: 0, duration: 0.3 });
+      for (let i = 0; i < flipCount; i++) {
+        tl.set(img1Ref.current, { zIndex: 1 });
+        tl.set(img2Ref.current, { zIndex: 0 });
+        tl.to({}, { duration: flipSpeed });
 
-        tl.to(overlay1Ref.current, { autoAlpha: 1, duration: 0.5 });
-        tl.to(overlay2Ref.current, { autoAlpha: 1, duration: 0.5 }, `+=${overlayScrollOffset}`);
+        tl.set(img1Ref.current, { zIndex: 0 });
+        tl.set(img2Ref.current, { zIndex: 1 });
+        tl.to({}, { duration: flipSpeed });
+      }
 
-        tl.to(textRef.current, { autoAlpha: 1, duration: 0.5, onStart: () => textRef.current.innerText = text }, "<");
-        tl.to(overlay1Ref.current, { autoAlpha: 0, duration: 0.5 }, `<`);
+      tl.to(overlayTextRef.current, { autoAlpha: 0, duration: 0.3 });
+
+      tl.to(overlay1Ref.current, { autoAlpha: 1, duration: 0.5 });
+        
+      tl.to(overlay2Ref.current, { autoAlpha: 1, duration: 0.5 }, `+=${overlayScrollOffset}`);
+
+      if (overImageRef.current) {
+        tl.to(
+          overImageRef.current,
+          { autoAlpha: 1, duration: 0.5 },
+        );
+      }
+
+      tl.to(overlay1Ref.current, { autoAlpha: 0, duration: 0.5 }, `<`);
 
     }, containerRef);
 
     return () => ctx.revert();
-    }, [flipCount, flipSpeed, delayScroll, overlayScrollOffset, text, overlayText]);
+    }, [flipCount, flipSpeed, delayScroll, overlayScrollOffset, overImage, overlayText]);
 
 
   return (
@@ -116,8 +124,16 @@ export default function ImgScrollSwap({
         className="overlay-image"
       />
 
-        <div ref={textRef} className="text-content"></div>
-        <div ref={overlayTextRef} className="overlay-text-content"></div>
+      {overImage && (
+        <img 
+          ref={overImageRef}
+          src={overImage}
+          alt={altOverImage}
+          className="over-image-content"
+        />
+      )}
+
+      <div ref={overlayTextRef} className="overlay-text-content"></div>
 
     </article>
   );

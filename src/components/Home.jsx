@@ -11,7 +11,7 @@ export default function Home() {
             <section className="article-section">
 
                 <ArticleCard
-                    title="Trond"
+                    title="Fra fengsel til forsoning"
                     image={Trond_fengsel}
                     link={"/trond"}
                 />

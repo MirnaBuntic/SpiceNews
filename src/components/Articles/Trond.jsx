@@ -1,5 +1,4 @@
 //Effekter
-import HeroScroll from "../Effects/HeroScroll"
 import ImgScrollSwap from "../Effects/ImgScrollSwap"
 import ScrollVideo from "../Effects/ScrollVideo"
 import ZoomTransition from "../Effects/ZoomTransition"
@@ -11,6 +10,7 @@ import ImgEffect from "../Effects/ImgEffect"
 import DollarBill from "../../img/Trond/DollarBill_Trond.jpg"
 import Busk1 from "../../img/Trond/Busk1.png"
 import Busk2 from "../../img/Trond/Busk2.png"
+import Silhuett from "../../img/Trond/SilhuettTrond.png"
 import Lommelykt1 from "../../img/Trond/Lommelykt1.png"
 import Lommelykt2 from "../../img/Trond/Lommelykt2.png"
 import Avis_animasjon from "../../img/Trond/Avis_animasjon_final.mp4"
@@ -44,7 +44,7 @@ export default function Trond() {
                 image2={Busk2}
                 overlay1={Lommelykt1}
                 overlay2={Lommelykt2}
-                text="STOPP, POLITI!"
+                overImage={Silhuett}
                 overlayText="*Det rasler i buskene*"
                 alt1="Busk nr 1"
                 alt2="Busk nr 2"
