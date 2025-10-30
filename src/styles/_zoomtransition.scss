@@ -60,6 +60,12 @@
   opacity: 0;
 }
 
+@media (min-width: 1400px) {
+  .transition-block {
+    min-height: calc(var(--vh, 1vh) * 350);
+  }
+}
+
 @media (min-width: 2000px) {
   .zoom-image {
     height: 150%;

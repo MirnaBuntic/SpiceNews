@@ -220,6 +220,8 @@ export default function Trond() {
 
             <section>
                 <h4>De mørke tankene</h4>
+
+                <p></p>
             </section>
 
             <section className="flex-dollar">  
