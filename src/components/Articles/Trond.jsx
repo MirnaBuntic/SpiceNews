@@ -218,6 +218,10 @@ export default function Trond() {
                 <Slider images={sliderImages}/>
             </section>
 
+            <section>
+                <h4>De mørke tankene</h4>
+            </section>
+
             <section className="flex-dollar">  
                 <article className="dollarBill-section">
                     <h3>"100kr"</h3>
