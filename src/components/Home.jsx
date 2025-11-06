@@ -2,6 +2,7 @@ import ArticleCard from "./ArticleCard";
 import Trond_fengsel from "../img/Trond/Trond_fengsel.jpg"
 import lasse from "../img/Lasse/lasse.jpg"
 import skjermtid from "../img/Skjermtid/pc.png"
+import tormod from "../img/Sjømann/Tormod.jpg"
 import Header from "./Header";
 
 export default function Home() {
@@ -29,8 +30,8 @@ export default function Home() {
                     link={"/skjermtid"}
                 />
                 <ArticleCard
-                    title="Jimmys morfar"
-                    image={Trond_fengsel}
+                    title="Sjømann"
+                    image={tormod}
                     link={"/trond"}
                 />
         
