@@ -2,6 +2,8 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/home';
 import Trond from './components/Articles/Trond';
+import Lasse from './components/Articles/Lasse';
+import Skjermtid from './components/Articles/Skjermtid';
 import './styles/global.scss';
 import { useEffect } from 'react';
 
@@ -30,6 +32,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/trond" element={<Trond />} />
+        <Route path="/lasse" element={<Lasse />} />
+        <Route path="/skjermtid" element={<Skjermtid />} />
       </Routes>
     </Layout>
   )

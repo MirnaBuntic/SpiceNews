@@ -1,12 +1,11 @@
-import chili1 from '../img/chili1.png';
+import logoFont from "../img/Logo/LogoFont.png"
 
 export default function Header() {
 
     return (
         <header>
             <div className='logo'>
-                <img src={chili1} alt='En chilli' />
-                <p>SpiceNews</p>
+                <img src={logoFont} alt="SpiceNews logo" />
             </div>
         </header>
     )

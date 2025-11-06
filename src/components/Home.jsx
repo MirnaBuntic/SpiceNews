@@ -1,5 +1,7 @@
 import ArticleCard from "./ArticleCard";
 import Trond_fengsel from "../img/Trond/Trond_fengsel.jpg"
+import lasse from "../img/Lasse/lasse.jpg"
+import skjermtid from "../img/Skjermtid/pc.png"
 import Header from "./Header";
 
 export default function Home() {
@@ -17,17 +19,17 @@ export default function Home() {
                 />
                 
                 <ArticleCard
-                    title="Trond"
-                    image={Trond_fengsel}
-                    link={"/trond"}
+                    title="Lasse"
+                    image={lasse}
+                    link={"/lasse"}
                 />
                 <ArticleCard
-                    title="Trond"
-                    image={Trond_fengsel}
-                    link={"/trond"}
+                    title="Skjermtid"
+                    image={skjermtid}
+                    link={"/skjermtid"}
                 />
                 <ArticleCard
-                    title="Trond"
+                    title="Jimmys morfar"
                     image={Trond_fengsel}
                     link={"/trond"}
                 />
