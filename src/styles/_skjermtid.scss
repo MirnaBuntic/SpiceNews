@@ -1,8 +1,122 @@
 .skjermtid-article {
     background-color: #E6E6E6;
+    padding-top: 1rem;
     padding-bottom: 15rem;
+    color: black;
 
     .pcMobil {
-        width: 100%;
+        width: 80%;
+        display: flex;
+        justify-self: center;
+        margin-top: 2rem;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    .intro {
+        margin: 3rem 2rem 4rem 2rem;
+    }
+
+    .limb {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 0 0 2rem;
+
+        img {
+            max-width: 200px;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            width: 200px;
+        }
+    }
+
+    .limb2 {
+        margin: 2rem 2rem 4rem 2rem;
+    }
+
+    .scrolling {
+        margin: 0 2rem 0 2rem;
+    }
+
+    .survey {
+        max-width: 350px;
+        margin: 5rem 2rem 5rem 2rem;
+
+        .survey-question {
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+
+        button {
+            margin: .5rem;
+            border: 1px solid #ccc;
+            background: #fff;
+            color: black;
+            border-radius: 999px;
+            padding: 0.6rem 2rem;
+            font-size: 0.8rem;
+        }
+
+        button.is-selected {
+            background-color: #4c8b4c;
+            color: #fff;
+        }
+
+        ul {
+            padding: 0;
+            margin-top: 3rem;
+        }
+        
+        .survey-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            margin-bottom: 1rem;
+            align-items: center;
+        }
+
+        .is-selected{ 
+            .survey-bar {
+                background-color: #4c8b4c; 
+                transform: scaleY(1.05);
+            }
+
+            .survey-percent, .survey-label {
+                font-weight: bold;
+            }
+        }
+
+        
+        .survey-bar-wrapper {
+            grid-column: 1 / 2;
+            height: 18px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .survey-bar {
+            height: 100%;
+            background-color: #3f76a5; 
+        }
+
+        .survey-label {
+            grid-column: 1 / 2;
+            font-size: small;
+            margin-top: .5rem;
+            color: black;
+        }
+
+        .survey-percent {
+            grid-column: 2 / 3;
+            font-size: small;
+            color: black;
+        }
     }
 }
+
+
