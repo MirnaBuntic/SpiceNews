@@ -4,7 +4,7 @@ export default function Footer() {
 
     return (
         <footer>
-            <p>© 2025 Ditt Firmanavn. Alle rettigheter forbeholdt.</p>
+            <p>© 2025 SpiceNews. Alle rettigheter forbeholdt.</p>
         </footer>
     )
 }
