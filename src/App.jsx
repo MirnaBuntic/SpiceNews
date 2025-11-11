@@ -4,6 +4,7 @@ import Home from './components/home';
 import Trond from './components/Articles/Trond';
 import Lasse from './components/Articles/Lasse';
 import Skjermtid from './components/Articles/Skjermtid';
+import Sjømann from './components/Articles/Sjømann';
 import './styles/global.scss';
 import { useEffect } from 'react';
 
@@ -34,6 +35,7 @@ export default function App() {
         <Route path="/trond" element={<Trond />} />
         <Route path="/lasse" element={<Lasse />} />
         <Route path="/skjermtid" element={<Skjermtid />} />
+        <Route path="/sjømann" element={<Sjømann />} />
       </Routes>
     </Layout>
   )

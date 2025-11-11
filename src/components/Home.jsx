@@ -25,14 +25,15 @@ export default function Home() {
                     link={"/lasse"}
                 />
                 <ArticleCard
-                    title="Skjermtid"
+                    title="Skjermen: den nye virkeligheten"
                     image={skjermtid}
                     link={"/skjermtid"}
                 />
+                
                 <ArticleCard
                     title="Sjømann"
                     image={tormod}
-                    link={"/trond"}
+                    link={"/sjømann"}
                 />
         
             </section>

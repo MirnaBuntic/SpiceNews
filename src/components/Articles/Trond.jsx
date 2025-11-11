@@ -94,10 +94,16 @@ export default function Trond() {
                     <p className="text">
                         På trappene utenfor Halden Togstasjon møter vi Trond Henriksen, 
                         mange husker han som “Norges farligste mann” og en beryktet person 
-                        innen det kriminelle miljøet på 90/tidlig 2000-tallet.
-                        Trond møter oss med et vennlig smil og et solid håndtrykk. 
+                        innen det kriminelle miljøet på 90/tidlig 2000-tallet. 
+                    </p>
+
+                    <p className="text">
+                        Trond møter oss med et vennlig smil og et solid håndtrykk.
                         Han har siden 2011 jobbet for Kirkens bymisjon, 
                         og viser oss stolt rundt i togstasjonens lokaler som i dag fungerer som café. 
+                    </p>
+
+                    <p className="text">
                         Over gaten ligger det gamle godshuset som ble bygd i 1879. 
                         Bygget er i dag restaurert og driftes av bymisjonen som kurs- og konferansesenter, 
                         og er en av Trond sine mange hjertesaker for byen.
