@@ -1,5 +1,6 @@
 //Effekter
 import ShowResult from "../Effects/showResults"
+import ImgEffect from "../Effects/ImgEffect"
 
 //Bilder
 import pc_mobil from "../../img/Skjermtid/pc_og_mobil.png"
@@ -33,10 +34,17 @@ export default function Skjermtid() {
             </article>
 
             <article className="limb">
-                <p>Vi lever i en digital tid hvor skjermen ikke lenger er et tilbehør, men har blitt en integrert del av kroppen vår. 
+                <p>
+                    Vi lever i en digital tid hvor skjermen ikke lenger er et tilbehør, men har blitt en integrert del av kroppen vår. 
                 </p>
 
-                <img src={mobil} alt="Hånd som holder i en telefon"/>
+                <ImgEffect
+                    src={mobil}
+                    alt="Hånd som holder i en telefon"
+                    containerClassName="reveal-wrap"
+                    imgClassName="reveal-img"
+                />
+
             </article>
 
             <p className="limb2">
@@ -88,7 +96,13 @@ export default function Skjermtid() {
             </article>
 
             <article className="limb digital">
-                <img src={pc} alt="En person sitter foran pc"/>
+
+                <ImgEffect
+                    src={pc}
+                    alt="En person sitter foran pc"
+                    containerClassName="reveal-wrap"
+                    imgClassName="reveal-img"
+                />
 
                 <p>
                     Foreldre setter regler, men sliter med å legge bort mobilen selv. 
@@ -98,6 +112,47 @@ export default function Skjermtid() {
             <p className="limb2">
                 Dette gjenspeiles også i undersøkelsen at majoriteten av deltakerne bruker skjerm først og fremst til underholdning og sosiale medier, ikke til jobb eller skolearbeid.
             </p>
+
+            <article className="scrolling">
+                <h3>Når blikket vender mot skjermen i stedet for mennesket</h3>
+
+                <p>
+                    Relasjonene våre betaler også en pris. 
+                    Når vi sitter rundt middagsbordet eller er sammen med andre, vandrer blikket ofte mot skjermen. 
+                    Ikke nødvendigvis fordi det skjer noe viktig, men fordi telefonen ligger der og frister.
+                </p>
+
+                <ShowResult
+                    question="Har skjermtiden din påvirket noen av relasjonene dine negativt?"
+
+                    answers={[
+                        { id: "a", text: "Ja", count: 14.3 },
+                        { id: "b", text: "Nei", count: 85.7 },
+                    ]}
+                />
+
+                <p>
+                    Over 85% av deltakerne i undersøkelsen sier riktignok at skjermbruken ikke har skadet relasjoner, men samtidig sier over 61% at de sliter med å la være å bruke mobilen sosialt. 
+                    Dette viser at selv om vi kanskje ikke ønsker å innrømme det, påvirkes tilstedeværelsen og samspillet med andre mennesker dypt. 
+                </p>
+            </article>
+
+            <article className="scrolling">
+                <h3>Jakten på ro i det digitale kaoset</h3>
+
+                <p>
+                    Skjermen representerer en dyp og inngrodd vane. 
+                    Samtidig oppgir nesten 86% at de bruker telefonen for å slappe av, og vender seg til skjermen for både ro og distraksjon. 
+                    Men roen kan være falsk. 
+                </p>
+
+                <p>
+                    Nesten halvparten sier at skjermtiden har påvirket søvnen deres negativt. 
+                    Dette burde være et av de tydeligste varselsignalene. 
+                    Når vår digitale venn begynner å stjele fra vår mest essensielle restitusjon, tar den åpenbart mer enn den gir. 
+                    Spørsmålet er ikke lenger om vi er avhengige, men hvor mye tid og livskvalitet vi er villige til å ofre for å jakte på den neste varslingen. 
+                </p>
+            </article>
         </section>
     )
 }
