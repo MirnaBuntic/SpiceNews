@@ -61,17 +61,17 @@ export default function Skjermtid() {
                     Fenomenet med å “bare skulle sjekke en ting” eller “bare en video til” fører ofte til at tiden forsvinner i en endeløs strøm av klipp, bilder og oppdateringer. 
                     Det som skulle være fem minutter blir plutselig en time. 
                 </p>
+
+                <ShowResult
+                    question="Tilbringer du mye tid på skjerm når du er med venner og familie?"
+
+                    answers={[
+                        { id: "a", text: "Ja", count: 14.3 },
+                        { id: "b", text: "Nei", count: 23.8 },
+                        { id: "c", text: "Prøver å la være, men det er vanskelig .", count: 61.9 },
+                    ]}
+                />
             </article>
-
-            <ShowResult
-                question="Tilbringer du mye tid på skjerm når du er med venner og familie?"
-
-                answers={[
-                    { id: "a", text: "Ja", count: 14.3 },
-                    { id: "b", text: "Nei", count: 23.8 },
-                    { id: "c", text: "Prøver å la være, men det er vanskelig .", count: 61.9 },
-                ]}
-            />
 
             <article className="scrolling">
                 <h3>Fanget av vanen</h3>
