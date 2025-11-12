@@ -87,7 +87,7 @@ export default function Skjermtid() {
                 </p>
             </article>
 
-            <article className="limb2">
+            <article className="scrolling">
                 <h3>Den digitale barnevakten </h3>
 
                 <p>

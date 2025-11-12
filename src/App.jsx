@@ -1,12 +1,18 @@
 import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+
+
 import Layout from './components/Layout';
 import Home from './components/home';
 import Trond from './components/Articles/Trond';
 import Lasse from './components/Articles/Lasse';
 import Skjermtid from './components/Articles/Skjermtid';
 import Sjømann from './components/Articles/Sjømann';
+import ScrollToTop from './components/ScrollToTop';
+
 import './styles/global.scss';
-import { useEffect } from 'react';
+
+
 
 
 export default function App() {
@@ -30,6 +36,7 @@ export default function App() {
 
   return (
     <Layout>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/trond" element={<Trond />} />
