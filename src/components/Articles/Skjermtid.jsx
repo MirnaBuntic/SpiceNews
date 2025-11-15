@@ -1,24 +1,27 @@
 //Effekter
 import ShowResult from "../Effects/showResults"
 import ImgEffect from "../Effects/ImgEffect"
+import HeroScroll from "../Effects/HeroScroll"
 
 //Bilder
-import pc_mobil from "../../img/Skjermtid/pc_og_mobil.png"
+import pc_mobil2 from "../../img/Skjermtid/pc_og_mobil2.png"
 import mobil from "../../img/Skjermtid/mobil.png"
 import pc from "../../img/Skjermtid/pc.png"
 
 //Styles
 import "../../styles/_skjermtid.scss"
 
+
 export default function Skjermtid() {
 
     return (
         <section className="skjermtid-article">
-            <img src={pc_mobil} alt="pc og mobil" className="pcMobil" />
 
-            <h2>Skjermen: den nye virkeligheten</h2>
+            <HeroScroll title="Skjermen: den nye virkeligheten" image={pc_mobil2}/>
 
-            <article className="intro">
+            <article className="scrolling">
+                <h3>Når dagen begynner med et lysglimt fra skjermen</h3>
+
                 <p>Alarmen ringer, selvfølgelig på telefonen.
                     Du leter på nattbordet og under puten, strekker deg etter den, for å slumre i 10 minutter til.
                     Allerede før du har gnidd søvnen ut av øynene har du vært i kontakt med en skjerm.
@@ -93,6 +96,10 @@ export default function Skjermtid() {
                 <p>
                     Barn og unge vokser opp i denne digitale verdenen. Mange lærer å sveipe før de lærer å knyte skolissene, og skjermen er alltid tilgjengelig for lett underholdning.
                 </p>
+
+                <p>
+                    Dette gjenspeiles også i undersøkelsen at majoriteten av deltakerne bruker skjerm først og fremst til underholdning og sosiale medier, ikke til jobb eller skolearbeid.
+                </p>
             </article>
 
             <article className="limb digital">
@@ -108,10 +115,6 @@ export default function Skjermtid() {
                     Foreldre setter regler, men sliter med å legge bort mobilen selv. 
                 </p>
             </article>
-
-            <p className="limb2">
-                Dette gjenspeiles også i undersøkelsen at majoriteten av deltakerne bruker skjerm først og fremst til underholdning og sosiale medier, ikke til jobb eller skolearbeid.
-            </p>
 
             <article className="scrolling">
                 <h3>Når blikket vender mot skjermen i stedet for mennesket</h3>

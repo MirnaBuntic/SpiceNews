@@ -1,26 +1,13 @@
 .skjermtid-article {
     background-color: #E6E6E6;
-    padding-top: 1rem;
-    padding-bottom: 15rem;
+    padding-bottom: 5rem;
     color: black;
-
-    .pcMobil {
-        width: 100%;
-    }
-
-    h2 {
-        text-align: center;
-        margin-top: 4rem;
-    }
-
-    .intro {
-        margin: 3rem 2rem 4rem 2rem;
-    }
 
     .limb {
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-self: center;
 
         img {
             max-width: 200px;
@@ -124,4 +111,23 @@
     }
 }
 
+
+@media (min-width: 768px) {
+    .skjermtid-article {
+        .survey {
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+
+            .survey-question {
+                text-align: center;
+            }
+
+            .survey-buttons {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
 

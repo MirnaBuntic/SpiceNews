@@ -91,6 +91,7 @@
 
         img {
             width: 100%;
+            margin-bottom: 2rem;
         }
     }
 
@@ -254,6 +255,20 @@
     }
 }
 
+@media (min-width: 1024px) {
+
+    .dollarBill-section {
+        min-width: 40%;
+    }
+
+    .end-story {
+
+        img {
+            width: 40% !important;
+        }
+    }
+}
+
 @media (min-width: 2000px) {
     .trond-article {
         .img-scroll-flipbook {
@@ -296,6 +311,7 @@
             margin-bottom: 20rem;
 
             .dollarBill-section {
+
                 h3 {
                     font-size: 3rem;
                 }
@@ -306,6 +322,8 @@
             }
             p {
                 font-size: 2rem;
+                margin-right: 12rem;
+                margin-left: 0;
             }
         }
 

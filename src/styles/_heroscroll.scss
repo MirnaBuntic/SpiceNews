@@ -8,21 +8,19 @@
     width: 100%;
     height: calc(var(--vh, 1vh) * 100);
     object-fit: cover;
+    opacity: 85%;
   }
 
-  .hero-text {
+  .hero-title {
     color: white;
     text-align: center;
     position: absolute;
     top: 28%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
     z-index: 2;
-
-    h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
+    width: 100%;
+    font-size: xx-large;
   }
 }
