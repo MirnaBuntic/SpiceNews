@@ -62,7 +62,7 @@ export default function Trond() {
                 <div className="flex-text">
                     <p>Lommelykten lyser i ansiktet på de to fengselsrømmlingene.</p>
 
-                    <p>Med bagger fulle av smuglet narkotika befinner Trond og Morten seg nå i et dilemma.</p>
+                    <p> Med baklommen fylt med 1 kilo hasj befinner Trond og Morten seg nå i et dilemma.</p>
 
                     <p>Overgi seg eller fortsette på rømmen med 2 menn som gisler, der en av mennene er politi?</p>
                 </div>
