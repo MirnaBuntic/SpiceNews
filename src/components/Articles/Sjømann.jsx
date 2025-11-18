@@ -100,6 +100,8 @@ export default function Sjømann() {
                     <img src={barnevogn} alt="Kona til Tormod med barnevogn" />
                 </article>
             </section>
+
+            <p>hej</p>
         </section>
     )
 }
