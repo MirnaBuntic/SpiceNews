@@ -1,6 +1,6 @@
 .tormod-article {
-    background-color: #d9d9d9;
-    p {
+    background-color: #e2e2e2;
+    p, h2 {
         color: black;
     }
 
@@ -11,23 +11,69 @@
             object-fit: contain;
         }
 
+        h2 {
+            margin: 0 2rem 0 2rem;
+        }
+
         p {
             margin: 3rem 2rem 3rem 2rem;
         }
     }
 
-    .sertifikat {
+    .sertificate {
         display: flex;
         flex-direction: column;
 
         img {
             width: 70%;
             align-self: center;
+            margin-bottom: 3rem;
         }
 
         p {
             margin: 0 2rem 3rem 2rem;
         }
+
+        .sertificate2 {
+            margin-bottom: 8rem;
+        }
     }
 
+    .boat {
+
+        img {
+            width: 100%;
+            margin: 8rem 0 1rem 0;
+        }
+
+        p {
+            margin-bottom: 8rem;
+        }
+    }
+
+    .flex {
+        img {
+            width: 80%;
+        }
+
+        .flex1, .flex2 {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}
+
+@media (min-width: 768px) {
+    .tormod-article {
+        .flex {
+            .flex1 {
+                flex-direction: row;
+            }
+
+            .flex2 {
+                flex-direction: row-reverse;
+            }
+        }
+    }
 }

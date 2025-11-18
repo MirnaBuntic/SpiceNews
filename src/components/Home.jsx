@@ -31,7 +31,7 @@ export default function Home() {
                 />
                 
                 <ArticleCard
-                    title="Sjømann"
+                    title="Et liv på åpent hav"
                     image={tormod}
                     link={"/sjømann"}
                 />
