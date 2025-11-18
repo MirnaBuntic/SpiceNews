@@ -1,9 +1,32 @@
 .tormod-article {
     background-color: #d9d9d9;
+    p {
+        color: black;
+    }
 
     .intro {
         .tormod {
             width: 100%;
+            height: 100vh;
+            object-fit: contain;
+        }
+
+        p {
+            margin: 3rem 2rem 3rem 2rem;
+        }
+    }
+
+    .sertifikat {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 70%;
+            align-self: center;
+        }
+
+        p {
+            margin: 0 2rem 3rem 2rem;
         }
     }
 

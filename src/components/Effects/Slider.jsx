@@ -49,7 +49,6 @@ export default function Slider ({ images }) {
         >
         <button
             onClick={prevSlide}
-            aria-label="Föregående bild"
             className="slider-button prev"
         >
             &#10094;
@@ -65,7 +64,6 @@ export default function Slider ({ images }) {
 
         <button
             onClick={nextSlide}
-            aria-label="Nästa bild"
             className="slider-button next"
         >
             &#10095;
