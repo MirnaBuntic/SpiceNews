@@ -11,8 +11,10 @@ import tormodOgDama from "../../img/Sjømann/tormod-med-dama.jpg"
 import barnevogn from "../../img/Sjømann/barnevogn.jpg"
 import charente from "../../img/Sjømann/charente.jpg"
 import family from "../../img/Sjømann/family.jpg"
+import ship from "../../img/Sjømann/ship.png"
 
 import Slider from "../Effects/Slider"
+import ScrollingBoat from "../Effects/ScrollingBoat"
 
 import "../../styles/_sjømann.scss"
 
@@ -32,9 +34,12 @@ export default function Sjømann() {
 
     return (
         <section className="tormod-article">
-            <article className="intro">
 
-                <img src={tormod} alt="Tormod på båt" className="tormod"/>
+            <img src={tormod} alt="Tormod på båt" className="tormod"/>
+
+            <ScrollingBoat src={ship} />
+
+            <article className="intro">
 
                 <h2>Kollisjonen som endret kursen</h2>
 
@@ -42,7 +47,7 @@ export default function Sjømann() {
                     Blant motordur og verktøy nederst i skipet befinner Thormod seg sittende på kne med en skiftenøkkel i hånden. 
                     Han utfører den daglige kontrollen på skipets dieselmotorer. 
                     Plutselig høres et kraftig drønn gjennom maskinrommet og den unge maskinisten blir kastet gjennom rommet. 
-                    Inn fosser det en stri strøm av vann. 
+                    Inn fosser det en stri strøm av vann.
                 </p>
 
                 <p>Men først, la oss spole tilbake.</p>

@@ -4,12 +4,13 @@
         color: black;
     }
 
+    .tormod {
+        width: 100%;
+        height: 100vh;
+        object-fit: contain;
+    }
+
     .intro {
-        .tormod {
-            width: 100%;
-            height: 100vh;
-            object-fit: contain;
-        }
 
         h2 {
             margin: 0 2rem 0 2rem;
