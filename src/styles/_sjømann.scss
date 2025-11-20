@@ -1,6 +1,6 @@
 .tormod-article {
     background-color: #e2e2e2;
-    p, h2 {
+    p, h2, h3 {
         color: black;
     }
 
@@ -21,59 +21,73 @@
     }
 
     .sertificate {
-        display: flex;
-        flex-direction: column;
+        margin: 2rem;
 
-        img {
-            width: 70%;
-            align-self: center;
-            margin-bottom: 3rem;
-        }
+        figure {
+            display: flex;
+            flex-direction: column;
+            color: #00000082;
+            margin: 3rem 0;
 
-        p {
-            margin: 0 2rem 3rem 2rem;
+            img {
+                width: 100%;         
+            }
         }
 
         .sertificate2 {
-            margin-bottom: 8rem;
+            margin: 0 0 8rem 0;
         }
     }
 
     .boat {
+        figure {
+            margin: 0 0 5rem;
 
-        img {
-            width: 100%;
-            margin: 8rem 0 1rem 0;
+            img {
+                width: 100%;
+                margin: 8rem 0 1rem 0;
+            }
+
+            figcaption {
+                justify-self: center;
+                color: #00000082;
+            }
+        }
+
+        h3 {
+            margin-left: 2rem;
         }
 
         p {
-            margin-bottom: 8rem;
+            margin: 2rem 2rem 8rem 2rem;
         }
     }
 
-    .flex {
-        img {
-            width: 80%;
+    .love, .drama, .safe {
+        h3{
+            margin: 8rem 2rem 2rem;
         }
 
-        .flex1, .flex2 {
-            display: flex;
-            flex-direction: column;
+        p {
+            margin: 2rem;
         }
+
+        figure {
+            color: #00000082;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .drama h3, .safe h3{
+        margin-top: 5rem;
+    }
+
+    .safe{
+        padding-bottom: 2rem;
     }
 
 }
 
-@media (min-width: 768px) {
-    .tormod-article {
-        .flex {
-            .flex1 {
-                flex-direction: row;
-            }
-
-            .flex2 {
-                flex-direction: row-reverse;
-            }
-        }
-    }
-}
