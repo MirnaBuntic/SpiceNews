@@ -1,43 +1,60 @@
-import { useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLayoutEffect, useRef } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import "../../styles/_scrollingboat.scss"
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ScrollingBoat({src}) {
-    const ref = useRef(null);
+    const wrapperRef = useRef(null)
+    const boatRef = useRef(null)
+    const barRef = useRef(null)
 
     useLayoutEffect(() => {
-        const el = ref.current;
-        if (!el) return;
+        const wrapper = wrapperRef.current
+        const boat = boatRef.current;
+        const bar = barRef.current;
+        if (!wrapper || !boat || !bar) return;
 
         const ctx = gsap.context(() => {
-        gsap.to(el, {
-            x: () => window.innerWidth - el.offsetWidth,
-            ease: "none",
-            scrollTrigger: {
-                trigger: document.documentElement, 
-                start: () => window.innerHeight - 150,                 
-                end: "bottom bottom",              
-                scrub: true,                       
-                invalidateOnRefresh: true
-            },
-        })
+            const scrollConfig = {
+                trigger: document.documentElement,
+                start: () => window.innerHeight - 150,
+                end: "bottom bottom",
+                scrub: true,
+                invalidateOnRefresh: true,
+            }
 
-        ScrollTrigger.create({
-            trigger: document.documentElement,
-            start: () => window.innerHeight - 150,
-            toggleClass: {
-                targets: el,
-                className: "scrolling-boat--visible",
-            },
+            gsap.to(boat, {
+                x: () => window.innerWidth - boat.offsetWidth,
+                ease: "none",
+                scrollTrigger: scrollConfig,
+            })
+
+
+            gsap.to(bar, {
+                scaleX: 1,
+                ease: "none",
+                scrollTrigger: scrollConfig,
+            });
+
+            ScrollTrigger.create({
+                trigger: document.documentElement,
+                start: () => window.innerHeight - 150,
+                toggleClass: {
+                targets: wrapper,
+                className: "wrapper--visible",
+                },
+            })
         })
-    })
     
         return () => ctx.revert();
     }, []);
 
     return (
-        <img ref={ref} src={src} className="scrolling-boat" />
+        <div ref={wrapperRef} className="wrapper">
+            <div ref={barRef} className="progress" />
+            <img ref={boatRef} src={src} className="scrolling-boat" />
+        </div>
     )
 }
