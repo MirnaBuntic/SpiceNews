@@ -1,5 +1,5 @@
 import "../../styles/_zoomtransition.scss";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -18,7 +18,7 @@ export default function ZoomTransition({
   const endRef = useRef(null);
   const pinRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const startImg = startRef.current;
     const endImg = endRef.current;
     const pinWrapper = pinRef.current;

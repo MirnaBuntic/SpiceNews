@@ -8,13 +8,19 @@ import logo from "../../img/Lasse/logo.png"
 import hest from "../../img/Lasse/hest.jpg"
 import tegning from "../../img/Lasse/tegning.png"
 import jacket from "../../img/Lasse/jacket.jpg"
+import c2e from "../../img/Lasse/c2e.jpg"
+import c2ehest from "../../img/Lasse/c2ehest.jpg"
 
 import Slider from "../Effects/Slider"
 import SwapPic from "../Effects/SwapPic"
+import ZoomTransition from "../Effects/ZoomTransition"
+import ScrollText from "../Effects/ScrollText"
 
 import "../../styles/_lasse.scss"
 
 export default function Lasse() {
+
+    const transitionDuration = 3;
 
     const sliderImages = [
         { src: lasse, alt: "Lasse Julsen", caption: "Lasse Julsen, 59år. Foto: privat." },
@@ -23,6 +29,8 @@ export default function Lasse() {
         { src: hest, alt: "Lasse med hest", caption: "Over 40 års erfaring med tekstilindustri og klesproduksjon. Foto: Lasse Julsen." },
         { src: produkter, alt: "Produkter som Lasse har designet", caption: "Har jobbet for store merker. Blant annet Kingsland og Hést. Foto: Lasse Julsen." },
     ]
+
+    console.log("c2e, c2ehest i Lasse:", c2e, c2ehest)
 
     return (
         <section className="lasse-article">
@@ -157,6 +165,34 @@ export default function Lasse() {
                     - Det er veldig mye mer å sette seg inn i, enn bare å tegne den genseren, sier han med et smil.
                 </p>
             </article>
+
+            <section className="transition-block">
+                <ZoomTransition
+                    imageStart={c2e}
+                    imageEnd={c2ehest}
+                    altStart="Modeller"
+                    altEnd="Jente på hest"
+                    startScale={1}
+                    endScale={1.5}
+                    transitionDuration={transitionDuration}
+                />
+
+                <ScrollText transitionDuration={transitionDuration}>
+                    <p>
+                        Bedriften C2E er stadig i vekst. I skrivende stund er varene Lasse har produsert tilgjengelig for kunder i Norge, Sverige, Danmark, Holland, Belgia og Irland. 
+                        C2E har også lansert nettbutikk med mulighet for shipping til hele verden. Videre på agendaen står det å finne salgs-agenter i Tyskland. 
+                        Det blir spennende å se på utviklingen til C2E.
+                    </p>
+
+                    <p>Ønsker du å ta en titt på varene Lasse og Marianne har laget kan du besøke nettbutikken her:</p>
+
+                    <a href="www.c2e.site">www.c2e.site</a>
+                </ScrollText>
+
+            </section>
+    
+
+            
         </section>
     )
 }
