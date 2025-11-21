@@ -12,11 +12,13 @@ import barnevogn from "../../img/Sjømann/barnevogn.jpg"
 import charente from "../../img/Sjømann/charente.jpg"
 import family from "../../img/Sjømann/family.jpg"
 import ship from "../../img/Sjømann/ship.png"
+import thormodColor from "../../img/Sjømann/Thormod-color.png"
 
 import Slider from "../Effects/Slider"
 import ScrollingBoat from "../Effects/ScrollingBoat"
 
 import "../../styles/_sjømann.scss"
+import SwapPic from "../Effects/SwapPic"
 
 export default function Sjømann() {
 
@@ -35,7 +37,12 @@ export default function Sjømann() {
     return (
         <section className="tormod-article">
 
-            <img src={tormod} alt="Tormod på båt" className="tormod"/>
+            <SwapPic
+                startImage={tormod}
+                startAlt="Svarthvit bilde av Thormod på båt"
+                endImage={thormodColor}
+                endAlt="Farget bilde av Thormod på båt"
+            />
 
             <ScrollingBoat src={ship} />
 
