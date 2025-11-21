@@ -167,8 +167,6 @@
             margin-right: 10rem;
         }
 
-        
-
         .flex-dollar {
             flex-direction: row;
             margin-top: 10rem;
@@ -194,14 +192,23 @@
 
 @media (min-width: 1024px) {
 
-    .dollarBill-section {
-        min-width: 40%;
-    }
+    .trond-article {
+        .flex-dollar {
+            .dollarBill-section {
+                min-width: 40%;
+            }
+        }
 
-    .end-story {
+        .end-story {
 
-        img {
-            width: 40% !important;
+            img {
+                width: 40% !important;
+            }
+        }
+
+        .childhood, .school, .frank, .dark-thoughts, .crime, .riksalarm, .responsibility, .end-story {
+            margin-left: 20rem;
+            margin-right: 20rem;
         }
     }
 }
