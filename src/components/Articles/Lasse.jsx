@@ -5,6 +5,14 @@ import produkter from "../../img/Lasse/produkter.png"
 import basement from "../../img/Lasse/basement.jpg"
 import lasseDama2 from "../../img/Lasse/lasse-dama2.jpg"
 import logo from "../../img/Lasse/logo.png"
+import hest from "../../img/Lasse/hest.jpg"
+import tegning from "../../img/Lasse/tegning.png"
+import jacket from "../../img/Lasse/jacket.jpg"
+
+import Slider from "../Effects/Slider"
+import SwapPic from "../Effects/SwapPic"
+
+import "../../styles/_lasse.scss"
 
 export default function Lasse() {
 
@@ -12,14 +20,14 @@ export default function Lasse() {
         { src: lasse, alt: "Lasse Julsen", caption: "Lasse Julsen, 59år. Foto: privat." },
         { src: lasseDama, alt: "Lasse og kona", caption: "Gift, har 3 voksne barn og en hund. Foto: privat." },
         { src: lasseUng, alt: "Lasse som ung", caption: "Bodd i Sarpsborg hele livet. Foto: Jarl M. Andersen." },
-        { src: lasseDama, alt: "Lasse pg kona", caption: "Over 40 års erfaring med tekstilindustri og klesproduksjon. Foto: Lasse Julsen." },
+        { src: hest, alt: "Lasse med hest", caption: "Over 40 års erfaring med tekstilindustri og klesproduksjon. Foto: Lasse Julsen." },
         { src: produkter, alt: "Produkter som Lasse har designet", caption: "Har jobbet for store merker. Blant annet Kingsland og Hést. Foto: Lasse Julsen." },
     ]
 
     return (
         <section className="lasse-article">
 
-            <article>
+            <article className="intro">
                 <h2>Et liv i tekstil - nå syr Lasse sin egen drøm</h2>
 
                 <p>
@@ -31,15 +39,17 @@ export default function Lasse() {
             </article>
 
             <article>
-                <section className="slider-section">
+                <section className="slider-section lasse-slider">
+                    <h3>5 raske fakta om Lasse:</h3>
+
                     <Slider images={sliderImages}/>
                 </section>
             </article>
 
             <article>
-                <h3>“Hvorfor gjør vi det her for alle andre?”</h3>
+                <h3 className="lasse-h3">“Hvorfor gjør vi det her for alle andre?”</h3>
 
-                <div>
+                <div className="lasse-flex">
                     <p>
                         Vi befinner oss i Mørchs vei på Opsund, et rolig boligområde like utenfor Sarpsborg sentrum. 
                         Her bor Lasse med sin kone Hege og hunden Alvin. 
@@ -50,7 +60,7 @@ export default function Lasse() {
                 </div>
             </article>
 
-            <article>
+            <article className="background">
                 <p>
                     Med bakgrunn fra blant annet markedsføring på BI, IT-administrasjon hos Næringsakademiet, butikksjef i Boomerang, Domus og Cityklær har Lasse opparbeidet seg mye kunnskap om klesproduksjon og tekstil. 
                     I de senere årene har han jobbet for store merker som Kingsland og Hést. 
@@ -68,7 +78,7 @@ export default function Lasse() {
                 <img src={lasseDama2} alt="Lasse og kona" />
             </article>
 
-            <article>
+            <article className="design">
                 <h3>Mer enn bare en designer</h3>
 
                 <p>
@@ -108,7 +118,15 @@ export default function Lasse() {
                 </p>
             </article>
 
-            <article>
+            <SwapPic
+                startImage={tegning}
+                startAlt="Design-tegning av sort jakke"
+                endImage={jacket}
+                endAlt="Sort jakke"
+                className="swap"
+            />
+
+            <article className="market">
                 <h3>Finne sin plass i markedet</h3>
 
                 <p>
@@ -129,7 +147,7 @@ export default function Lasse() {
                 </p>
             </article>
 
-            <article>
+            <article className="market">
                 <h3>Å tegne en genser, det klarer alle</h3>
 
                 <p>

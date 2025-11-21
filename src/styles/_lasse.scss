@@ -1,0 +1,131 @@
+.lasse-article {
+    background-color: #273B16;
+    padding-top: 2rem;
+    color: white;
+
+    .intro h2, .intro p{
+        margin: 2rem 2rem 0 2rem;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .lasse-slider {
+        align-items: stretch;
+        height: 500px;
+        background-color: transparent;
+        height: 750px;
+        padding: 0;
+        margin-top: -3rem;
+        margin-bottom: 6rem;
+
+        h3 {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 1rem;
+            color: white;
+        }
+
+        .slider {
+            margin-bottom: 5rem;
+        }
+
+        img {
+            width: 70%;
+            max-height: 400px;
+            border-radius: 15px;
+        }
+
+        .slider-button {
+            top: 89%;
+            background-color: transparent;
+
+            &.prev {
+                left: 15px;
+            }
+
+            &.next {
+                right: 15px;
+            }
+        }
+
+        .slider-caption {
+            position: absolute;
+            top: 84%;
+            width: 70%;
+            background-color: #7B303D;
+            color: white;
+            padding: 1.5rem 3.3rem;
+            margin: 0;
+            border-radius: 20px;
+        }
+    }
+
+    .lasse-h3 {
+        margin-left: 2rem;
+    }
+
+    .lasse-flex {
+        display: flex;
+        margin: 2rem;
+        align-items: center;
+        gap: 5%;
+
+        img {
+            width: 45%;
+            height: fit-content;
+            border-radius: 15px;
+        }
+    }
+
+    .background {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p{
+            margin: 1.5rem 2rem;
+        }
+
+        img {
+            width: 80%;
+            border-radius: 20px;
+            margin-top: 3rem;
+        }
+    }
+
+    .design, .market{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            margin: 4rem 2rem 0 2rem;
+            align-self: flex-start;
+        }
+
+        p {
+            margin: 1.5rem 2rem;
+        }
+
+        figure {
+            margin: 2rem;
+        }
+        
+    }
+
+    .swap {
+        margin-top: 5rem;
+        height: 75vh;
+
+        .startImg, .endImg {
+            object-fit: cover;
+            height: 65%;
+            margin-top: 6rem;
+        }
+    
+       
+    }
+
+}

@@ -5,7 +5,7 @@ import "../../styles/_SwapPic.scss"
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function SwapPic({ startImage, endImage, startAlt="", endAlt="" }) {
+export default function SwapPic({ startImage, endImage, startAlt="", endAlt="", className="" }) {
 
     const newImgRef = useRef(null)
 
@@ -31,7 +31,7 @@ export default function SwapPic({ startImage, endImage, startAlt="", endAlt="" }
   }, [])
 
   return (
-    <div className="img-wrap">
+    <div className={`img-wrap ${className}`}>
 
       <img src={startImage} className="startImg" alt={startAlt} />
 
