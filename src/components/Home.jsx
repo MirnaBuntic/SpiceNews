@@ -20,7 +20,7 @@ export default function Home() {
                 />
                 
                 <ArticleCard
-                    title="Lasse"
+                    title="Et liv i tekstil - nå syr Lasse sin egen drøm"
                     image={lasse}
                     link={"/lasse"}
                 />
@@ -31,7 +31,7 @@ export default function Home() {
                 />
                 
                 <ArticleCard
-                    title="Et liv på åpent hav"
+                    title="Kollisjonen som endret kursen"
                     image={tormod}
                     link={"/sjømann"}
                 />

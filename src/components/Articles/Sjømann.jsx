@@ -1,3 +1,4 @@
+//Bilder
 import tormod from "../../img/Sjømann/tormod.jpg"
 import sertifikat from "../../img/Sjømann/sertifikat.jpg"
 import krigskort from "../../img/Sjømann/krigstjenestekort.jpg"
@@ -14,11 +15,14 @@ import family from "../../img/Sjømann/family.jpg"
 import ship from "../../img/Sjømann/ship.png"
 import thormodColor from "../../img/Sjømann/Thormod-color.png"
 
+//Effekter
 import Slider from "../Effects/Slider"
 import ScrollingBoat from "../Effects/ScrollingBoat"
-
-import "../../styles/_sjømann.scss"
 import SwapPic from "../Effects/SwapPic"
+
+//Styles
+import "../../styles/_sjømann.scss"
+
 
 export default function Sjømann() {
 
