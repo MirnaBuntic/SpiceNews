@@ -10,6 +10,7 @@ import tegning from "../../img/Lasse/tegning.png"
 import jacket from "../../img/Lasse/jacket.jpg"
 import c2e from "../../img/Lasse/c2e.jpg"
 import c2ehest from "../../img/Lasse/c2ehest.jpg"
+import light from "../../img/Lasse/light.png"
 
 import Slider from "../Effects/Slider"
 import SwapPic from "../Effects/SwapPic"
@@ -34,6 +35,12 @@ export default function Lasse() {
 
     return (
         <section className="lasse-article">
+
+            <img
+                src={light}
+                alt="Lasses kjeller illustrert i en lyspære"
+                className="spin-pic"
+            />
 
             <article className="intro">
                 <h2>Et liv i tekstil - nå syr Lasse sin egen drøm</h2>
