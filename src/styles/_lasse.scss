@@ -3,6 +3,22 @@
     padding-top: 2rem;
     color: white;
 
+    .spin-pic {
+        display: flex;
+        animation: spin 2s linear 1;
+        width: 200%;
+        justify-self: center;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
     .intro h2, .intro p{
         margin: 2rem 2rem 0 2rem;
     }
@@ -133,50 +149,38 @@
        
     }
 
-    .scroll-lasse{
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #ffffffa6;
-
-        p {
-            background-color: transparent;
-            margin: 2rem;
-            color: black;
-        }
-
-        .p2 {
-            text-align: center;
-            margin-top: 0;
-        }
-
-        a {
-            color: black;
-            text-decoration: underline;
-            margin-bottom: 3rem;
-        }
-    }
-
     .transition-block {
         .zoom-section {
             &::before {
                 background: transparent;
             }
-        }
-    }
 
-    .spin-pic {
-        display: inline-block;
-        animation: spin 2s linear 1;
-    }
-
-    @keyframes spin {
-        from {
-            transform: rotate(0deg);
+            margin-bottom: 0;
         }
-        to {
-            transform: rotate(360deg);
+
+        .scroll-lasse{
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(255 255 255 / 69%);
+
+            p {
+                background-color: transparent;
+                margin: 2rem;
+                color: black;
+            }
+
+            .p2 {
+                text-align: center;
+                margin-top: 0;
+            }
+
+            a {
+                color: black;
+                text-decoration: underline;
+                margin-bottom: 3rem;
+            }
         }
     }
 

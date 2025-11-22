@@ -5,7 +5,7 @@ import "../../styles/_SwapPic.scss"
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function SwapPic({ startImage, endImage, startAlt="", endAlt="", className="" }) {
+export default function SwapPic({ startImage, endImage, startAlt="", endAlt="", className="", start }) {
 
     const newImgRef = useRef(null)
 
@@ -20,7 +20,7 @@ export default function SwapPic({ startImage, endImage, startAlt="", endAlt="", 
         ease: "power2.out",         
         scrollTrigger: {
             trigger: newImg,
-            start: "top top",  
+            start,  
             end: "+=150",    
             scrub: 0.4,      
         },

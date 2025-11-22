@@ -46,6 +46,7 @@ export default function Sjømann() {
                 startAlt="Svarthvit bilde av Thormod på båt"
                 endImage={thormodColor}
                 endAlt="Farget bilde av Thormod på båt"
+                start="top top"
             />
 
             <ScrollingBoat src={ship} />

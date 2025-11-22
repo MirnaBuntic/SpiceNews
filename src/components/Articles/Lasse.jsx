@@ -139,6 +139,7 @@ export default function Lasse() {
                 endImage={jacket}
                 endAlt="Sort jakke"
                 className="swap"
+                start="top 40%"
             />
 
             <article className="market1">
