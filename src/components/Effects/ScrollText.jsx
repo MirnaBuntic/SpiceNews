@@ -5,7 +5,7 @@ import "../../styles/_scrolltext.scss"
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function ScrollText({ children, transitionDuration = 1 }) {
+export default function ScrollText({ children, transitionDuration = 1, className="" }) {
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function ScrollText({ children, transitionDuration = 1 }) {
   }, [transitionDuration]);
 
   return (
-    <article ref={textRef} className="scroll-text">
+    <article ref={textRef} className={`scroll-text ${className}`}>
       {children}
     </article>
   );

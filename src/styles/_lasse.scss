@@ -95,7 +95,7 @@
         }
     }
 
-    .design, .market{
+    .design, .market1, .market2{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -115,6 +115,10 @@
         
     }
 
+    .market2 {
+        margin-bottom: 5rem;
+    }
+
     .swap {
         margin-top: 5rem;
         height: 75vh;
@@ -128,4 +132,36 @@
        
     }
 
+    .scroll-lasse{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffffa6;
+
+        p {
+            background-color: transparent;
+            margin: 2rem;
+            color: black;
+        }
+
+        .p2 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        a {
+            color: black;
+            text-decoration: underline;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .transition-block {
+        .zoom-section {
+            &::before {
+                background: transparent;
+            }
+        }
+    }
 }

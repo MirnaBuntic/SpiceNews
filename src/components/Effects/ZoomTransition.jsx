@@ -12,7 +12,8 @@ export default function ZoomTransition({
   altEnd = "",
   startScale = 1,
   endScale = 1.5,
-  transitionDuration = 2, 
+  transitionDuration = 2,
+  className="" 
 }) {
   const startRef = useRef(null);
   const endRef = useRef(null);
@@ -51,23 +52,21 @@ export default function ZoomTransition({
   }, [startScale, endScale, transitionDuration]);
 
   return (
-    <article className="zoom-section">
-      <div className="zoom-container">
-        <div className="pin-wrapper" ref={pinRef}>
-          <img
-            ref={startRef}
-            src={imageStart}
-            alt={altStart}
-            className="zoom-image base"
-          />
-          <img
-            ref={endRef}
-            src={imageEnd}
-            alt={altEnd}
-            className="zoom-image overlay"
-          />
-        </div>
+    <article className={`zoom-section ${className}`}>
+      <div className="pin-wrapper" ref={pinRef}>
+        <img
+          ref={startRef}
+          src={imageStart}
+          alt={altStart}
+          className="zoom-image base"
+        />
+        <img
+          ref={endRef}
+          src={imageEnd}
+          alt={altEnd}
+          className="zoom-image overlay"
+        />
       </div>
     </article>
-  );
+  )
 }

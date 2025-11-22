@@ -134,7 +134,7 @@ export default function Lasse() {
                 className="swap"
             />
 
-            <article className="market">
+            <article className="market1">
                 <h3>Finne sin plass i markedet</h3>
 
                 <p>
@@ -155,7 +155,7 @@ export default function Lasse() {
                 </p>
             </article>
 
-            <article className="market">
+            <article className="market2">
                 <h3>Å tegne en genser, det klarer alle</h3>
 
                 <p>
@@ -175,16 +175,17 @@ export default function Lasse() {
                     startScale={1}
                     endScale={1.5}
                     transitionDuration={transitionDuration}
+                    className="lasse-zoom"
                 />
 
-                <ScrollText transitionDuration={transitionDuration}>
+                <ScrollText transitionDuration={transitionDuration} className="scroll-lasse">
                     <p>
                         Bedriften C2E er stadig i vekst. I skrivende stund er varene Lasse har produsert tilgjengelig for kunder i Norge, Sverige, Danmark, Holland, Belgia og Irland. 
                         C2E har også lansert nettbutikk med mulighet for shipping til hele verden. Videre på agendaen står det å finne salgs-agenter i Tyskland. 
                         Det blir spennende å se på utviklingen til C2E.
                     </p>
 
-                    <p>Ønsker du å ta en titt på varene Lasse og Marianne har laget kan du besøke nettbutikken her:</p>
+                    <p className="p2">Ønsker du å ta en titt på varene Lasse og Marianne har laget kan du besøke nettbutikken her:</p>
 
                     <a href="www.c2e.site">www.c2e.site</a>
                 </ScrollText>
