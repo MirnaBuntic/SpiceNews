@@ -11,32 +11,43 @@ export default function ImgEffect({
     alt = "",
     containerClassName,
     imgClassName,
+    text,
+    textClass
 }) {
 
     const containerRef = useRef(null)
-    const imgRef = useRef(null)
+    const contentRef = useRef(null)
 
     useEffect(() => {
+        const container = containerRef.current
+        const content = contentRef.current
+        if (!container || !content) return
+
         const ctx = gsap.context(() => {
-            gsap.from(imgRef.current, {
+            gsap.from(content, {
                 opacity: 0,
                 y: 50,
                 duration: 1,
                 ease: "power3.out",
                 scrollTrigger: {
-                    trigger: containerRef.current ?? imgRef.current,
+                    trigger: container ?? content,
                     start: "top 80%",
                     toggleActions: "play none none none",
                 }
             })
-        }, containerRef);
+        }, container);
 
         return () => ctx.revert();
     }, [])
 
     return (
         <article ref={containerRef} className={containerClassName}>
-            <img ref={imgRef} src={src} alt={alt} className={imgClassName} />
+            {src ? (
+            <img ref={contentRef} src={src} alt={alt} className={imgClassName} />
+
+            ) : (
+                <p ref={contentRef} className={textClass}>{text}</p>
+            )}
         </article>
     )
 }

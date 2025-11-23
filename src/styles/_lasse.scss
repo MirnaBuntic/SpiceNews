@@ -1,13 +1,11 @@
 .lasse-article {
     background-color: #273B16;
-    padding-top: 2rem;
     color: white;
 
     .spin-pic {
-        display: flex;
+        display: inline-block;
         animation: spin 2s linear 1;
-        width: 200%;
-        justify-self: center;
+        width: 100%;
     }
 
     @keyframes spin {
@@ -43,14 +41,12 @@
             color: white;
         }
 
-        .slider {
-            margin-bottom: 5rem;
-        }
-
         img {
             width: 70%;
-            max-height: 450px;
+            height: auto;
             border-radius: 15px;
+            max-height: 450px;
+            max-width: 450px;
         }
 
         .slider-button {
@@ -112,7 +108,7 @@
         }
     }
 
-    .design, .market1, .market2{
+    .design, .market1, .market2, .design-div{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -184,4 +180,165 @@
         }
     }
 
+    .container{
+        .Bubble {
+            display: inline-block;
+            max-width: 300px;
+            padding: 10px 14px;
+            border: 5px solid #7B303D;
+            border-radius: 12px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 5px;
+                bottom: -13px;
+                width: 0;
+                height: 0;
+                border-top: 8px solid #7B303D;
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .lasse-article {
+        .intro {
+            text-align: center;
+            margin-bottom: 8rem;
+        }
+
+        .lasse-slider {
+            .slider {
+                margin-bottom: 4rem;
+            }
+
+            .slider-button {
+
+                &.prev {
+                    left: 80px;
+                }
+
+                &.next {
+                    right: 80px;
+                }
+            }
+        }
+
+        .lasse-h3 {
+            text-align: center;
+        }
+
+        .lasse-flex {
+            justify-content: center;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+
+            img {
+                max-height: 350px;
+                max-width: 350px;
+            }
+
+            p {
+                width: 60%;
+            }
+        }
+
+        .background img {
+            width: 30%;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .design-div {
+            flex-direction: row-reverse;
+            justify-content: center;
+
+            margin-top: 5rem;
+
+            .design-text {
+                width: 50%;
+            }
+        }
+
+        .design, .market1, .market2, .design-div{
+            p {
+                margin: 3rem 2rem;
+            }
+            
+        }
+
+        .market2 {
+                margin-top: 5rem;
+        }
+
+        .swap {
+            .startImg, .endImg {
+                object-fit: contain;
+
+            }
+        
+        
+        }
+        
+    }
+}
+
+@media (min-width: 1024px) {
+    .lasse-article {
+        .lasse-slider {
+            .slider-button {
+                &.prev {
+                    left: 200px;
+                }
+
+                &.next {
+                    right: 200px;
+                }
+            }
+        }
+        
+    }
+}
+
+@media(min-width: 1440px) {
+    .lasse-article{
+        p {
+            font-size: 1.2rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        .background, .design, .market1, .market2, .intro{
+            margin-right: 20rem;
+            margin-left: 20rem;
+        }
+
+        .lasse-slider {
+            img {
+                margin-bottom: 5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 2000px) {
+    .lasse-article {
+        .lasse-slider {
+            .slider-button {
+                &.prev {
+                    left: 400px;
+                }
+
+                &.next {
+                    right: 400px;
+                }
+            }
+        }
+    }
 }

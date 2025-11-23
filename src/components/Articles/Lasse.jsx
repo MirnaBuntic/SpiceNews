@@ -16,6 +16,7 @@ import Slider from "../Effects/Slider"
 import SwapPic from "../Effects/SwapPic"
 import ZoomTransition from "../Effects/ZoomTransition"
 import ScrollText from "../Effects/ScrollText"
+import ImgEffect from "../Effects/ImgEffect"
 
 import "../../styles/_lasse.scss"
 
@@ -102,9 +103,11 @@ export default function Lasse() {
                     Lasse hadde på sin side lang erfaring med produksjon, fortolling, markedsføring, kjennskap til fabrikker og kunnskap om design av diverse klær og accessoirer.
                 </p>
 
-                <p>
-                    - For det som er når man jobber i små og mellom store selskaper er at man må ha litt forskjellige hatter, forteller Lasse.
-                </p>
+                <ImgEffect
+                    textClass="Bubble"
+                    containerClassName="container"
+                    text="- For det som er når man jobber i små og mellom store selskaper er at man må ha litt forskjellige hatter, forteller Lasse."
+                />
 
                 <p>
                     Sammen laget de en forretningsplan med budsjett og skisserte opp en kolleksjon. 
@@ -112,25 +115,33 @@ export default function Lasse() {
                     De gjennomførte en “salgspitch” for et investeringsbyrå og ble plutselig stoppet midtveis i pitchen.
                 </p>
 
-                <p>
-                    - Så sier han, STOPP, jeg skal være med på det her, forteller Lasse.
-                </p>
+                <ImgEffect
+                    textClass="Bubble"
+                    containerClassName="container"
+                    text="- Så sier han, STOPP, jeg skal være med på det her, forteller Lasse."
+                />
 
-                <figure>
-                    <img src={logo} alt="Logo" />
+                <div className="design-div">
+                    <figure>
+                        <img src={logo} alt="Logo" />
 
-                    <figcaption>Illustrasjon/Logo: Lasse Julsen</figcaption>
-                </figure>
+                        <figcaption>Illustrasjon/Logo: Lasse Julsen</figcaption>
+                    </figure>
 
-                <p>
-                    Fra det punktet forhandlet de frem en avtale om at både Marianne og Lasse fikk lønn fra dag 1. 
-                    Selskapet C2E består da av en passiv eier med 50,1 prosent mens Lasse og Marianne eier 24,9 prosent hver. 
-                    Alle bedriftens ledd og stillinger har derfor vært besatt av de to. Lasse forteller at han gjør alt designarbeidet, produksjon med logistikk, design av klær og salgsmateriell, vedlikehold av sosiale plattformer og oppdatering av nettbutikken.
-                </p>
+                    <div className="design-text">
+                        <p>
+                            Fra det punktet forhandlet de frem en avtale om at både Marianne og Lasse fikk lønn fra dag 1. 
+                            Selskapet C2E består da av en passiv eier med 50,1 prosent mens Lasse og Marianne eier 24,9 prosent hver. 
+                            Alle bedriftens ledd og stillinger har derfor vært besatt av de to. Lasse forteller at han gjør alt designarbeidet, produksjon med logistikk, design av klær og salgsmateriell, vedlikehold av sosiale plattformer og oppdatering av nettbutikken.
+                        </p>
 
-                <p>
-                    - Alt inntil varene er på lager, så må hun sørge for at varene blir solgt, dra på messer, besøke butikker, snakke med selgere og den biten der, sier han.
-                </p>
+                        <p>
+                            - Alt inntil varene er på lager, så må hun sørge for at varene blir solgt, dra på messer, besøke butikker, snakke med selgere og den biten der, sier han.
+                        </p>
+                    </div>
+         
+                </div>
+
             </article>
 
             <SwapPic
@@ -149,18 +160,22 @@ export default function Lasse() {
                     Under oppstarten av et nytt merke måtte bedriften bestemme seg for hvor de skulle posisjonere seg i dagens marked. Lasse forteller at de ønsket ikke å konkurrere på pris, men heller å konkurrere på kvalitet, design, funksjonalitet og slitestyrke.
                 </p>
 
-                <p>
-                    - Det betyr jo at varene våre også koster litt mer, men det er bevisst at vi har lagt oss inn der, sier han.
-                </p>
+                <ImgEffect
+                    textClass="Bubble"
+                    containerClassName="container"
+                    text="- Det betyr jo at varene våre også koster litt mer, men det er bevisst at vi har lagt oss inn der, sier han."
+                />
 
                 <p>
                     Lasse forteller at dagens marked og kunder stiller også krav til hvilket stoff som blir brukt, hvordan plaggene blir produsert, dyrevelferd og sosiale rettigheter hos fabrikkene de samarbeider med. 
                     Alle kravene har innvirkning på plaggets pris og stiller samtidig krav til at bedriften tenker på bærekraft.
                 </p>
 
-                <p>
-                    - Det å velge resirkulert polyester, fremfor ny polyester gjør at man tar del i kretsløpet på en annen måte da, konkluderer han.
-                </p>
+                <ImgEffect
+                    textClass="Bubble"
+                    containerClassName="container"
+                    text="- Det å velge resirkulert polyester, fremfor ny polyester gjør at man tar del i kretsløpet på en annen måte da, konkluderer han."
+                />
             </article>
 
             <article className="market2">

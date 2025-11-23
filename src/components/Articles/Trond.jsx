@@ -312,7 +312,11 @@ export default function Trond() {
             </section>
 
             <section className="responsibility">
-                <h4>Tar du ansvar for handlingene dine? Eller mener du at det er problemer i livet ditt som ikke har blitt fanget opp i tidligere fase?, spør studentene.</h4>
+                <ImgEffect
+                    textClass="Bubble"
+                    containerClassName="container"
+                    text="Tar du ansvar for handlingene dine? Eller mener du at det er problemer i livet ditt som ikke har blitt fanget opp i tidligere fase?, spør studentene."
+                />
 
                 <p>
                     - I ungdomsårene så var nok tanken at samfunnet hadde skylden, sier han. I voksen alder ser han annerledes på saken.
@@ -327,7 +331,11 @@ export default function Trond() {
             </section>
 
             <section className="responsibility">
-                <h4>I følge tall fra nettavisen koster det staten rundt 1 million kroner å oppbevare kriminelle i fengsel. Enig, eller ikke enig?, spør studentene. </h4>
+                <ImgEffect
+                    textClass="Bubble"
+                    containerClassName="container"
+                    text="I følge tall fra nettavisen koster det staten rundt 1 million kroner å oppbevare kriminelle i fengsel. Enig, eller ikke enig?, spør studentene."
+                />
 
                 <p>
                     - Jeg har kostet samfunnet over 100 millioner kroner, og det er 1990 beløp, så i dag vil det være 150 millioner tenker jeg.
