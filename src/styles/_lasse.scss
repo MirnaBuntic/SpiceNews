@@ -2,6 +2,7 @@
     background-color: #273B16;
     color: white;
 
+    //Fått hjälp från chatgpt
     .spin-pic {
         display: inline-block;
         animation: spin 2s linear 1;
@@ -181,6 +182,7 @@
     }
 
     .container{
+        //Hjälp från chatgpt
         .Bubble {
             display: inline-block;
             max-width: 300px;
@@ -313,6 +315,10 @@
 
         p {
             font-size: 1.2rem;
+        }
+
+        h2 {
+            font-size: 2.3rem;
         }
 
         h3 {
