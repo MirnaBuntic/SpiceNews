@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useLayoutEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import "../../styles/_imgeffect.scss"
@@ -18,7 +18,7 @@ export default function ImgEffect({
     const containerRef = useRef(null)
     const contentRef = useRef(null)
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const container = containerRef.current
         const content = contentRef.current
         if (!container || !content) return
@@ -32,7 +32,7 @@ export default function ImgEffect({
                 scrollTrigger: {
                     trigger: container ?? content,
                     start: "top 80%",
-                    toggleActions: "play none none none",
+                    toggleActions: "play none none reverse",
                 }
             })
         }, container);

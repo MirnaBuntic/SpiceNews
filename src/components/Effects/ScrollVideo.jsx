@@ -1,15 +1,15 @@
-import { useRef, useEffect } from "react"
+import { useRef, useLayoutEffect } from "react"
 import gsap from "gsap"
 import  { ScrollTrigger } from "gsap/ScrollTrigger"
 import "../../styles/_scrollvideo.scss"
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function ScrollVideo({ src, className = "", playbackRate = 1 }) {
+export default function ScrollVideo({ src, className = "", playbackRate }) {
     const videoRef = useRef(null)
-  const containerRef = useRef(null)
+    const containerRef = useRef(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const video = videoRef.current
     const container = containerRef.current
     if (!video || !container) return

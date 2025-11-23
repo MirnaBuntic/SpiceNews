@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useLayoutEffect, useRef } from "react"
 import { gsap } from "gsap";
 
 export default function Slider ({ images }) {
@@ -31,7 +31,7 @@ export default function Slider ({ images }) {
         else if (distance < -minSwipeDistance) prevSlide();
     };
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const img = imgRef.current;
 
         gsap.fromTo(
@@ -42,36 +42,36 @@ export default function Slider ({ images }) {
     }, [current]);
 
     return (
-    <article
-        className="slider"
-        onTouchStart={onTouchStart}
-        onTouchEnd={onTouchEnd}
-        >
-        <button
-            onClick={prevSlide}
-            className="slider-button prev"
-        >
-            &#10094;
-        </button>
+        <article
+            className="slider"
+            onTouchStart={onTouchStart}
+            onTouchEnd={onTouchEnd}
+            >
+            <button
+                onClick={prevSlide}
+                className="slider-button prev"
+            >
+                &#10094;
+            </button>
 
-        <img
-            ref={imgRef}
-            src={images[current].src}
-            alt={images[current].alt}
-            className="slider-image"
-            draggable={false}
-        />
+            <img
+                ref={imgRef}
+                src={images[current].src}
+                alt={images[current].alt}
+                className="slider-image"
+                draggable={false}
+            />
 
-        <button
-            onClick={nextSlide}
-            className="slider-button next"
-        >
-            &#10095;
-        </button>
+            <button
+                onClick={nextSlide}
+                className="slider-button next"
+            >
+                &#10095;
+            </button>
 
-        {images[current].caption && (
-            <p className="slider-caption">{images[current].caption}</p>
-        )}
-    </article>
+            {images[current].caption && (
+                <p className="slider-caption">{images[current].caption}</p>
+            )}
+        </article>
     )
 }

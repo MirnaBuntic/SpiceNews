@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+
+//Hjälp av chatgpt
 export default function ShowResult ({ question, answers }) {
     const [showResults, setShowResults] = useState(false);
     const [selected, setSelected] = useState(null);

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../../styles/_scrolltext.scss"
@@ -8,15 +8,15 @@ gsap.registerPlugin(ScrollTrigger);
 export default function ScrollText({ children, transitionDuration = 1, className="" }) {
   const textRef = useRef(null);
 
-  useEffect(() => {
-    const el = textRef.current;
-    if (!el) return;
+  useLayoutEffect(() => {
+    const textElement = textRef.current;
+    if (!textElement) return;
 
-    gsap.from(el, {
+    gsap.from(textElement, {
       opacity: 0,
       y: 50,
       scrollTrigger: {
-        trigger: el,
+        trigger: textElement,
         start: "top bottom",
         end: "bottom top",
         scrub: true,
