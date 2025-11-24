@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../../styles/_popup.scss";
 
 export default function PopUp({ info, children }) {
@@ -7,10 +7,10 @@ export default function PopUp({ info, children }) {
 
     const togglePopup = () => setIsVisible(!isVisible)
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         function handleClickOutside(event) {
         if (ref.current && !ref.current.contains(event.target)) {
-            setIsVisible(false);
+            setIsVisible(false)
         }
         }
 

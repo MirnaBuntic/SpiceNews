@@ -23,6 +23,7 @@ export default function ZoomTransition({
     const startImg = startRef.current;
     const endImg = endRef.current;
     const pinWrapper = pinRef.current;
+    
     if (!startImg || !endImg || !pinWrapper) return;
 
     const tl = gsap.timeline({
@@ -35,12 +36,10 @@ export default function ZoomTransition({
         pinSpacing: true,
         anticipatePin: 1,
         invalidateOnRefresh: true,
-        fastScrollEnd: true,
-        markers: false, 
       },
     });
 
-    tl.to(startImg, { scale: endScale, opacity: 0, ease: "none" }, 0);
+    tl.to(startImg, { scale: endScale, opacity: 0, ease: "none" });
 
     tl.fromTo(endImg, { opacity: 0 }, { opacity: 1, ease: "none" }, 0);
 
@@ -58,13 +57,13 @@ export default function ZoomTransition({
           ref={startRef}
           src={imageStart}
           alt={altStart}
-          className="zoom-image base"
+          className="zoom-image start"
         />
         <img
           ref={endRef}
           src={imageEnd}
           alt={altEnd}
-          className="zoom-image overlay"
+          className="zoom-image end"
         />
       </div>
     </article>

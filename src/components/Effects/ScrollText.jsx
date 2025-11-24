@@ -10,6 +10,7 @@ export default function ScrollText({ children, transitionDuration = 1, className
 
   useLayoutEffect(() => {
     const textElement = textRef.current;
+    
     if (!textElement) return;
 
     gsap.from(textElement, {

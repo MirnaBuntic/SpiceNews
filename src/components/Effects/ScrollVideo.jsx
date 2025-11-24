@@ -12,6 +12,7 @@ export default function ScrollVideo({ src, className = "", playbackRate }) {
   useLayoutEffect(() => {
     const video = videoRef.current
     const container = containerRef.current
+    
     if (!video || !container) return
 
     video.playbackRate = playbackRate

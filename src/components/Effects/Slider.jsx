@@ -3,15 +3,15 @@ import { useState} from "react"
 export default function Slider ({ images }) {
     const [current, setCurrent] = useState(0);
 
-    if (!images.length) return null
+    if (!images || images.length === 0) return null
 
     const nextSlide = () => {
-        setCurrent((prev) => (prev + 1) % images.length);
-    };
+        setCurrent((prev) => prev === images.length - 1 ? 0 : prev + 1)
+    }
 
     const prevSlide = () => {
-        setCurrent((prev) => (prev - 1 + images.length) % images.length);
-    };
+        setCurrent((prev) => prev === 0 ? images.length - 1 : prev -1)
+    }
 
     
     return (

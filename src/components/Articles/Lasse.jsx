@@ -1,3 +1,4 @@
+//Bilder
 import lasse from "../../img/Lasse/lasse.jpg"
 import lasseDama from "../../img/Lasse/lasseOgDama.jpg"
 import lasseUng from "../../img/Lasse/lasse-ung.jpg"
@@ -12,12 +13,14 @@ import c2e from "../../img/Lasse/c2e.jpg"
 import c2ehest from "../../img/Lasse/c2ehest.jpg"
 import light from "../../img/Lasse/light.png"
 
+//Effekter
 import Slider from "../Effects/Slider"
 import SwapPic from "../Effects/SwapPic"
 import ZoomTransition from "../Effects/ZoomTransition"
 import ScrollText from "../Effects/ScrollText"
 import ImgEffect from "../Effects/ImgEffect"
 
+//Styles
 import "../../styles/_lasse.scss"
 
 export default function Lasse() {

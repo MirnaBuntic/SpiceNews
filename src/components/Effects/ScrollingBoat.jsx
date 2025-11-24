@@ -14,6 +14,7 @@ export default function ScrollingBoat({src}) {
         const wrapper = wrapperRef.current
         const boat = boatRef.current;
         const bar = barRef.current;
+        
         if (!wrapper || !boat || !bar) return;
 
         const ctx = gsap.context(() => {

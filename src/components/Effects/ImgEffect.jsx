@@ -21,6 +21,7 @@ export default function ImgEffect({
     useLayoutEffect(() => {
         const container = containerRef.current
         const content = contentRef.current
+        
         if (!container || !content) return
 
         const ctx = gsap.context(() => {

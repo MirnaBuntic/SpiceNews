@@ -5,136 +5,181 @@ import "../../styles/_imgscrollswap.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
+//Fått hjälp av chatgpt
 export default function ImgScrollSwap({
-    image1,
-    image2,
-    overlay1,
-    overlay2,
-    overImage,
-    overlayText,
-    alt1,
-    alt2,
-    altOverlay1,
-    altOverlay2,
-    altOverImage,
-    flipCount = 10,
-    flipSpeed = 0.1,
-    delayScroll = 0.2,
-    overlayScrollOffset = 0.2,
-    className = "",
+  image1,
+  image2,
+  alt1 = "",
+  alt2 = "",
+  flipCount = 4,          
+  flipSpeed = 0.1,        
+  overlayText,            
+  overlay1,               
+  overlay2,               
+  altOverlay1 = "",
+  altOverlay2 = "",
+  overImage,            
+  altOverImage = "",
+  className = "",
 }) {
-    const containerRef = useRef(null);
-    const img1Ref = useRef(null);
-    const img2Ref = useRef(null);
-    const overlay1Ref = useRef(null);
-    const overlay2Ref = useRef(null);
-    const overlayTextRef = useRef(null);
-    const overImageRef = useRef(null)
+  const containerRef = useRef(null);
+  const img1Ref = useRef(null);
+  const img2Ref = useRef(null);
+  const textRef = useRef(null);
+  const overlay1Ref = useRef(null);
+  const overlay2Ref = useRef(null);
+  const finalRef = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-        
-      gsap.set(img1Ref.current, { zIndex: 1 });
-      gsap.set(img2Ref.current, { zIndex: 0 });
-      gsap.set(overlay1Ref.current, { autoAlpha: 0 });
-      gsap.set(overlay2Ref.current, { autoAlpha: 0 });
-      gsap.set(overImageRef.current, { autoAlpha: 0, innerText: "" });
-      gsap.set(overlayTextRef.current, { autoAlpha: 0, innerText: "" });
+      const img1 = img1Ref.current;
+      const img2 = img2Ref.current;
+      const text = textRef.current;
+      const overlay1 = overlay1Ref.current;
+      const overlay2 = overlay2Ref.current;
+      const finalImg = finalRef.current;
 
+      if (!img1 || !img2) return;
+
+      gsap.set(img1, { opacity: 1 });
+      gsap.set(img2, { opacity: 0 });
+
+      if (text) {
+        gsap.set(text, { opacity: 0, y: 20 });
+      }
+
+      if (overlay1) gsap.set(overlay1, { opacity: 0 });
+      if (overlay2) gsap.set(overlay2, { opacity: 0 });
+      if (finalImg) gsap.set(finalImg, { opacity: 0 });
+
+      const flipTl = gsap.timeline({
+        repeat: flipCount - 1,
+        yoyo: true,
+      });
+
+      flipTl
+        .to(img1, { opacity: 0, duration: flipSpeed })
+        .to(img2, { opacity: 1, duration: flipSpeed }, "<");
 
       const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-          pin: true,
-          pinSpacing: true,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-        },
+        paused: true, 
       });
 
-      tl.to({}, { duration: delayScroll });
+      tl.to({}, { duration: 0.5 });
 
-      tl.to(overlayTextRef.current, {
-        autoAlpha: 1,
-        duration: 6,
-        onStart: () => {
-          overlayTextRef.current.innerText = overlayText || "";
-        }
-      });
+      tl.to({}, { duration: 0.5 });
 
-      for (let i = 0; i < flipCount; i++) {
-        tl.set(img1Ref.current, { zIndex: 1 });
-        tl.set(img2Ref.current, { zIndex: 0 });
-        tl.to({}, { duration: flipSpeed });
-
-        tl.set(img1Ref.current, { zIndex: 0 });
-        tl.set(img2Ref.current, { zIndex: 1 });
-        tl.to({}, { duration: flipSpeed });
+      if (text && overlayText) {
+        tl.to(text, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+        });
+        tl.add(flipTl, "<")
+      } else {
+        tl.add(flipTl);
       }
 
-      tl.to(overlayTextRef.current, { autoAlpha: 0, duration: 0.3 });
-
-      tl.to(overlay1Ref.current, { autoAlpha: 1, duration: 0.5 });
+      if (overlay1 && overlay2) {
         
-      tl.to(overlay2Ref.current, { autoAlpha: 1, duration: 0.5 }, `+=${overlayScrollOffset}`);
-
-      if (overImageRef.current) {
         tl.to(
-          overImageRef.current,
-          { autoAlpha: 1, duration: 0.5 },
-        );
+          overlay1,
+          {
+            opacity: 1,
+            duration: 0.7,
+          },
+          "+=0.2"
+        )
+
+        
+        if (text && overlayText) {
+          tl.to(
+            text,
+            {
+              opacity: 0,
+              duration: 0.3,
+            },
+            "<" 
+          )
+        }
+        
+        tl.to(overlay2, {
+          opacity: 1,
+          duration: 0.7,
+        })
+          
+          .to(
+            overlay1,
+            {
+              opacity: 0,
+              duration: 0.7,
+            },
+            "<"
+          );
       }
 
-      tl.to(overlay1Ref.current, { autoAlpha: 0, duration: 0.5 }, `<`);
+      if (finalImg) {
+        tl.to(finalImg, {
+          opacity: 1,
+          duration: 0.8,
+        }, "+=0.2")
+      }
 
+  
+      ScrollTrigger.create({
+        trigger: containerRef.current,
+        start: "top top",
+        end: () => "+=" + window.innerHeight * 3,
+        pin: true,
+        scrub: true,
+        animation: tl,
+    
+      });
     }, containerRef);
 
     return () => ctx.revert();
-    }, [flipCount, flipSpeed, delayScroll, overlayScrollOffset, overImage, overlayText]);
-
+  }, [flipCount, flipSpeed, overlayText]);
 
   return (
-    <article ref={containerRef} className={`img-scroll-flipbook ${className}`}>
-      <img
-        ref={img1Ref}
-        src={image1}
-        alt={alt1}
+    <article
+      ref={containerRef}
+      className={`img-scroll-flipbook ${className}`}
+    >
+      <img ref={img1Ref} src={image1} alt={alt1} />
+      <img ref={img2Ref} src={image2} alt={alt2} />
+
+      {overlay1 && (
+        <img
+          ref={overlay1Ref}
+          src={overlay1}
+          alt={altOverlay1}
+          className="overlay-image"
         />
+      )}
 
-      <img
-        ref={img2Ref}
-        src={image2}
-        alt={alt2}
-      />
-
-      <img
-        ref={overlay1Ref}
-        src={overlay1}
-        alt={altOverlay1}
-        className="overlay-image"
-      />
-
-      <img
-        ref={overlay2Ref}
-        src={overlay2}
-        alt={altOverlay2}
-        className="overlay-image"
-      />
+      {overlay2 && (
+        <img
+          ref={overlay2Ref}
+          src={overlay2}
+          alt={altOverlay2}
+          className="overlay-image"
+        />
+      )}
 
       {overImage && (
-        <img 
-          ref={overImageRef}
+        <img
+          ref={finalRef}
           src={overImage}
           alt={altOverImage}
           className="over-image-content"
         />
       )}
 
-      <div ref={overlayTextRef} className="overlay-text-content"></div>
-
+      {overlayText && (
+        <div ref={textRef} className="overlay-text-content">
+          {overlayText}
+        </div>
+      )}
     </article>
   );
 }
