@@ -147,11 +147,15 @@
     }
 
     .transition-block {
-        .zoom-section {
-            margin-bottom: 0;
+        .lasse-zoom {
+            &::before {
+                content: "";
+                margin-bottom: 0;
+                background: transparent;
+            }
         }
 
-        .scroll-lasse{
+        .scroll-lasse {
             padding: 0;
             display: flex;
             flex-direction: column;
@@ -159,7 +163,7 @@
             background-color: rgb(255 255 255 / 69%);
 
             p {
-                background-color: transparent;
+                background: transparent;
                 margin: 2rem;
                 color: black;
             }
