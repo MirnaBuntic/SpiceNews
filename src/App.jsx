@@ -1,6 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { useEffect } from 'react';
-
 
 import Layout from './components/Layout';
 import Home from './components/home';
@@ -16,23 +14,6 @@ import './styles/global.scss';
 
 
 export default function App() {
-
-    useEffect(() => {
-    const setVh = () => {
-      document.documentElement.style.setProperty("--vh", `${window.innerHeight * 0.01}px`);
-    };
-
-    setVh();
-
-    const handleResize = () => {
-      setVh();
-      if (window.ScrollTrigger) window.ScrollTrigger.refresh();
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <Layout>
