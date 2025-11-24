@@ -5,6 +5,7 @@ import "../../styles/_scrollingboat.scss"
 
 gsap.registerPlugin(ScrollTrigger);
 
+//Hjälp av chatgpt
 export default function ScrollingBoat({src}) {
     const wrapperRef = useRef(null)
     const boatRef = useRef(null)
@@ -14,7 +15,7 @@ export default function ScrollingBoat({src}) {
         const wrapper = wrapperRef.current
         const boat = boatRef.current;
         const bar = barRef.current;
-        
+
         if (!wrapper || !boat || !bar) return;
 
         const ctx = gsap.context(() => {
