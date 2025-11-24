@@ -6,7 +6,7 @@
     "footer";
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
   background-color: #d9c2a7;
 
   .header {
