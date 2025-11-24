@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "../../styles/_popup.scss";
 
+//Fått hjälp av chatgpt
 export default function PopUp({ info, children }) {
     const [isVisible, setIsVisible] = useState(false)
     const ref = useRef(null)
